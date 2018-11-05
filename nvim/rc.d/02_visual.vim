@@ -1,5 +1,5 @@
 set list
-set listchars=extends:<
+set listchars=tab:>\ ,extends:<
 set number
 set ruler
 set wrap
