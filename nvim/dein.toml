@@ -1,0 +1,126 @@
+#======================================
+# lib
+[[plugins]]
+name = 'lib/dein'
+repo = 'Shougo/dein.vim'
+
+[[plugins]]
+name = 'lib/unite'
+repo = 'Shougo/unite.vim'
+
+[[plugins]]
+name = 'lib/vimproc'
+repo = 'Shougo/vimproc.vim'
+hook_post_update = '''
+  if executable('gmake')
+    let cmd = 'gmake'
+  else
+    let cmd = 'make'
+  endif
+  let g:dein#plugin.build = cmd
+'''
+
+#======================================
+# util
+[[plugins]]
+name = 'util/yankround'
+repo = 'LeafCage/yankround.vim'
+
+[[plugins]]
+name = 'util/ale'
+repo = 'w0rp/ale'
+
+[[plugins]]
+name = 'util/accelerated-jk'
+repo = 'rhysd/accelerated-jk'
+
+[[plugins]]
+name = 'util/vim-commentary'
+repo = 'tpope/vim-commentary'
+
+[[plugins]]
+name = 'util/vim-fugitive'
+repo = 'tpope/vim-fugitive'
+
+[[plugins]]
+name = 'util/vim-gitgutter'
+repo = 'airblade/vim-gitgutter'
+
+#======================================
+# lang/markdown
+[[plugins]]
+name  = 'lang/markdown/vim-markdown'
+repo  = 'plasticboy/vim-markdown'
+on_ft = ['markdown']
+
+#======================================
+# lang/toml
+[[plugins]]
+name  = 'lang/toml/vim-toml'
+repo  = 'cespare/vim-toml'
+on_ft = ['toml']
+
+#======================================
+# lang/vala
+[[plugins]]
+name  = 'lang/vala/vala'
+repo  = 'arrufat/vala.vim'
+on_ft = ['vala']
+
+#======================================
+# lang/c
+[[plugins]]
+name  = 'lang/c/c'
+repo  = 'vim-scripts/c.vim'
+on_ft = ['c', 'cpp']
+
+#======================================
+# lang/go
+[[plugins]]
+name = 'lang/go/vim-go'
+repo = 'fatih/vim-go'
+on_ft = ['go']
+
+#======================================
+# lang/ruby
+
+#======================================
+# ui
+[[plugins]]
+name = 'ui/gruvbox'
+repo = 'morhetz/gruvbox'
+
+[[plugins]]
+name = 'ui/vim-trailing-whitespace'
+repo = 'bronson/vim-trailing-whitespace'
+
+[[plugins]]
+name    = 'ui/vim-airline'
+repo    = 'vim-airline/vim-airline'
+depends = ['vim-airline-themes']
+
+[[plugins]]
+name = 'ui/vim-airline-themes'
+repo = 'vim-airline/vim-airline-themes'
+
+[[plugins]]
+name = 'ui/tagbar'
+repo = 'majutsushi/tagbar'
+
+[[plugins]]
+name = 'ui/indentLine'
+repo = 'Yggdroot/indentLine'
+
+[[plugins]]
+name = 'ui/nerdtree'
+repo = 'scrooloose/nerdtree'
+
+[[plugins]]
+name    = 'ui/vim-nerdtree-tabs'
+repo    = 'jistr/vim-nerdtree-tabs'
+depends = ['scrooloose/nerdtree']
+
+[[plugins]]
+name    = 'ui/nerdtree-git-plugin'
+repo    = 'Xuyuanp/nerdtree-git-plugin'
+depends = ['scrooloose/nerdtree']
