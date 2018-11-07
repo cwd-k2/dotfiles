@@ -46,6 +46,18 @@ repo = 'tpope/vim-fugitive'
 name = 'util/vim-gitgutter'
 repo = 'airblade/vim-gitgutter'
 
+[[plugins]]
+name = 'util/deoplete'
+repo = 'Shougo/deoplete.nvim'
+
+[[plugins]]
+name = 'util/neosnippet'
+repo = 'Shougo/neosnippet.vim'
+
+[[plugins]]
+name = 'util/neosnippet-snippets'
+repo = 'Shougo/neosnippet-snippets'
+
 #======================================
 # lang/markdown
 [[plugins]]
