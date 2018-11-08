@@ -136,3 +136,12 @@ depends = ['scrooloose/nerdtree']
 name    = 'ui/nerdtree-git-plugin'
 repo    = 'Xuyuanp/nerdtree-git-plugin'
 depends = ['scrooloose/nerdtree']
+
+[[plugins]]
+name  = 'ui/goyo'
+repo  = 'junegunn/goyo.vim'
+
+[[plugins]]
+name  = 'ui/limelight'
+repo  = 'junegunn/limelight.vim'
+
