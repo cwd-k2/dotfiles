@@ -73,6 +73,13 @@ repo  = 'cespare/vim-toml'
 on_ft = ['toml']
 
 #======================================
+# lang/json
+[[plugins]]
+name  = 'lang/json/vim-json'
+repo  = 'elzr/vim-json'
+on_ft = ['json']
+
+#======================================
 # lang/vala
 [[plugins]]
 name  = 'lang/vala/vala'
@@ -95,6 +102,25 @@ on_ft = ['go']
 
 #======================================
 # lang/ruby
+
+#======================================
+# lang/javascript
+[[plugins]]
+name  = 'lang/javascript/vim-javascript'
+repo  = 'pangloss/vim-javascript'
+on_ft = ['javascript']
+
+#======================================
+# lang/typescript
+[[plugins]]
+name  = 'lang/typescript/typescript-vim'
+repo  = 'leafgarland/typescript-vim'
+on_ft = ['typescript']
+
+[[plugins]]
+name  = 'lang/typescript/tsuquyomi'
+repo  = 'Quramy/tsuquyomi'
+on_ft = ['typescript']
 
 #======================================
 # ui
