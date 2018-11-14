@@ -58,12 +58,28 @@ repo = 'Shougo/neosnippet.vim'
 name = 'util/neosnippet-snippets'
 repo = 'Shougo/neosnippet-snippets'
 
+[[plugins]]
+name = 'util/surround'
+repo = 'tpope/vim-surround'
+
 #======================================
 # lang/markdown
 [[plugins]]
 name  = 'lang/markdown/vim-markdown'
 repo  = 'plasticboy/vim-markdown'
 on_ft = ['markdown']
+
+#======================================
+# lang/html
+[[plugins]]
+name  = 'lang/html/emmet-vim'
+repo  = 'mattn/emmet-vim'
+on_ft = ['html', 'xhtml', 'phtml', 'xml']
+
+[[plugins]]
+name  = 'lang/html/vim-closetag'
+repo  = 'alvan/vim-closetag'
+on_ft = ['html', 'xhtml', 'phtml', 'xml']
 
 #======================================
 # lang/toml
@@ -135,7 +151,7 @@ repo = 'bronson/vim-trailing-whitespace'
 [[plugins]]
 name    = 'ui/vim-airline'
 repo    = 'vim-airline/vim-airline'
-depends = ['vim-airline-themes']
+depends = ['ui/vim-airline-themes']
 
 [[plugins]]
 name = 'ui/vim-airline-themes'
@@ -156,12 +172,12 @@ repo = 'scrooloose/nerdtree'
 [[plugins]]
 name    = 'ui/vim-nerdtree-tabs'
 repo    = 'jistr/vim-nerdtree-tabs'
-depends = ['scrooloose/nerdtree']
+depends = ['ui/nerdtree']
 
 [[plugins]]
 name    = 'ui/nerdtree-git-plugin'
 repo    = 'Xuyuanp/nerdtree-git-plugin'
-depends = ['scrooloose/nerdtree']
+depends = ['ui/nerdtree']
 
 [[plugins]]
 name  = 'ui/goyo'
