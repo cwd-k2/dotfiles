@@ -139,6 +139,13 @@ repo  = 'Quramy/tsuquyomi'
 on_ft = ['typescript']
 
 #======================================
+# lang/c
+[[plugins]]
+name  = 'lang/r/vim-R-plugin'
+repo  = 'vim-scripts/Vim-R-plugin'
+on_ft = ['r']
+
+#======================================
 # ui
 [[plugins]]
 name = 'ui/gruvbox'
