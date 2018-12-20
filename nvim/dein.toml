@@ -139,6 +139,13 @@ repo  = 'Quramy/tsuquyomi'
 on_ft = ['typescript']
 
 #======================================
+# lang/coffeescript
+[[plugins]]
+name  = 'lang/coffeescript/vim-coffee-script'
+repo  = 'kchmck/vim-coffee-script'
+on_ft = ['coffee']
+
+#======================================
 # lang/c
 [[plugins]]
 name  = 'lang/r/vim-R-plugin'
