@@ -198,9 +198,5 @@ name  = 'ui/goyo'
 repo  = 'junegunn/goyo.vim'
 
 [[plugins]]
-name  = 'ui/limelight'
-repo  = 'junegunn/limelight.vim'
-
-[[plugins]]
 name = 'ui/vim-devicons'
 repo = 'ryanoasis/vim-devicons'
