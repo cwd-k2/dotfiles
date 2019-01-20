@@ -146,7 +146,7 @@ repo  = 'kchmck/vim-coffee-script'
 on_ft = ['coffee']
 
 #======================================
-# lang/c
+# lang/R
 [[plugins]]
 name  = 'lang/r/vim-R-plugin'
 repo  = 'vim-scripts/Vim-R-plugin'
