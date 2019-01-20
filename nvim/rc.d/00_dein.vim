@@ -1,4 +1,4 @@
-let g:dein_dir = g:cache_home  . '/dein'
+let g:dein_dir = g:cache_home  . '/dein.nvim'
 let g:nvim_dir = g:config_home . '/nvim'
 
 let g:dein_path = g:dein_dir . '/repos/github.com/Shougo/dein.vim'
