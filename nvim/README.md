@@ -16,6 +16,7 @@ highly depending on dein.vim.
 - run `pip install --user-install neovim`.
 - launch neovim.
     - execute some commands.
+        - run `:UpdateremotePlugins`.
         - run `:VimProcInstall`. -- see `:help vimproc`
         - run `:GoInstallBinaries`.
 
