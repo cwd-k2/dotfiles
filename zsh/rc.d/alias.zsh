@@ -7,5 +7,3 @@ alias ll='ls -l'
 alias lla='ls -la'
 
 alias mkdir='mkdir -p'
-
-alias pip='pip-3.6'
