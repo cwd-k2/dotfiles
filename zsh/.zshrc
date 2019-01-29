@@ -28,7 +28,7 @@ function prepend_path() {
 }
 
 # ${ZDOTDIR}/${args}/ のディレクトリで *.zsh にマッチしたもの全部読み込み
-# ここでは rc.private rc.local, rc.d の順
+# ここでは rc.d, rc.local, rc.private の順
 function () {
     local i j
     for i in "${@}" ; do
@@ -36,6 +36,6 @@ function () {
             . "${j}"
         done
     done
-} "rc.private" "rc.local" "rc.d"
+} "rc.d" "rc.local" "rc.private"
 
 export PATH
