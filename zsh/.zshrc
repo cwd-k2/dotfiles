@@ -10,6 +10,8 @@ autoload -Uz vcs_info
 autoload -Uz colors
 colors
 
+bindkey -v
+
 function prepend_path() {
     local i
 

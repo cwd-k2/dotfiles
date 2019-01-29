@@ -1,5 +1,4 @@
 # keybind settings ---------------------------------------------------
-bindkey -v
 bindkey -M viins '^N' down-line-or-history
 bindkey -M viins '^P' up-line-or-history
 bindkey -M viins '^L' vi-cmd-mode
