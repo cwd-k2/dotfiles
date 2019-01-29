@@ -12,7 +12,7 @@ function precmd {
     vcs_info
 }
 
-pr1="%F{237}%K{248} %~ %F{248}"
+pr1="%F{237}%K{248} %m  %~ %F{248}"
 
 PROMPT='$pr1${vcs_info_msg_0_}%K{000}
 $pr3 %F{223}'
