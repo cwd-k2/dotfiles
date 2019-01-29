@@ -13,7 +13,7 @@ highly depending on dein.vim.
 ## what you have to do
 
 - setup git, python / pip, golang (manually. maybe OS's packaging system is quite a bit useful.)
-- run `pip install --user-install neovim`.
+- run `pip install neovim`.
 - launch neovim.
     - execute some commands.
         - run `:UpdateRemotePlugins`.
