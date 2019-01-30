@@ -39,3 +39,5 @@ function () {
 } "rc.d" "rc.local" "rc.private"
 
 export PATH
+
+compinit -d "${XDG_CACHE_HOME}/zsh/zcompdump"
