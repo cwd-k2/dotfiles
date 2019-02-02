@@ -10,7 +10,7 @@ zstyle ':vcs_info:*' actionformats "%K{237}%F{248} %b | %a %F{237}%c%u"
 
 function precmd {
     vcs_info
-    tmp_path_indicator
+    __tmp_path_indicator
 }
 
 pr1="%F{237}%K{248} %m  "
@@ -18,23 +18,27 @@ pr1="%F{237}%K{248} %m  "
 PROMPT='$pr1$pr2${vcs_info_msg_0_}%K{000}
 $pr3 %F{223}'
 
-function tmp_path_indicator() {
-    if [[ "${PWD}" =~ "${HOME}" ]] ; then
-        local tmp_path="~${PWD#$HOME}"
-    else
-        local tmp_path="${PWD}"
+function __tmp_path_indicator() {
+    local tmp_path="${PWD}"
+
+    if [[ "${tmp_path}" =~ "^${HOME}" ]] ; then
+        tmp_path="~${tmp_path#$HOME}"
     fi
 
     if [[ "${#tmp_path}" -gt 30 ]] ; then
-        local basename="$(basename "${tmp_path}")"
-        local shorten="$(echo "${tmp_path%/$basename}" | tr "/" "\n" | cut -c 1 | tr "\n" "/")"
-        tmp_path="${shorten}${basename}"
+        local base="${tmp_path##*/}"
+        local fore="${tmp_path%/*}"
+        while [[ "${#fore}" -gt 2 ]]; do
+            base="${${fore##*/}[1]}/${base}"
+            fore="${fore%/*}"
+        done
+        tmp_path="${fore}/${base}"
     fi
 
     pr2="${tmp_path} %F{248}"
 }
 
-function keymap_indicator() {
+function __keymap_indicator() {
     case "${KEYMAP}" in
         main|viins)
             pr3="%K{248}%F{237}%B VIINS %b%F{248}%K{000}"
@@ -46,7 +50,7 @@ function keymap_indicator() {
 }
 
 function zle-keymap-select zle-line-init zle-line-finish {
-    keymap_indicator
+    __keymap_indicator
     zle reset-prompt
 }
 
