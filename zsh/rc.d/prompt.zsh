@@ -28,8 +28,12 @@ function __tmp_path_indicator() {
     if [[ "${#tmp_path}" -gt 30 ]] ; then
         local base="${tmp_path##*/}"
         local fore="${tmp_path%/*}"
-        while [[ "${#fore}" -gt 2 ]]; do
-            base="${${fore##*/}[1]}/${base}"
+        while [[ "${#fore}" -gt 2 ]] ; do
+            if [[ "${${fore##*/}[1]}" = "." ]] ; then
+                base="${${fore##*/}[1,2]}/${base}"
+            else
+                base="${${fore##*/}[1]}/${base}"
+            fi
             fore="${fore%/*}"
         done
         tmp_path="${fore}/${base}"
