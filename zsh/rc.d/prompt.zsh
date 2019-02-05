@@ -29,7 +29,7 @@ function __tmp_path_indicator() {
         local base="${tmp_path##*/}"
         local fore="${tmp_path%/*}"
         while [[ "${#fore}" -gt 2 ]] ; do
-            if [[ "${${fore##*/}[1]}" = "." ]] ; then
+            if [[ "${fore##*/}" =~ "^." ]] ; then
                 base="${${fore##*/}[1,2]}/${base}"
             else
                 base="${${fore##*/}[1]}/${base}"
