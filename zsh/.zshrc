@@ -15,16 +15,15 @@ function prepend_path() {
 
     for i in "${@}" ; do
         if [[ -z "${PATH}" ]] ; then
-            PATH="${i}"
+            export PATH="${i}"
         else
             if [[ "${PATH}" != *${i}* ]] ; then
-                PATH="${i}:${PATH}"
+                export PATH="${i}:${PATH}"
             else
                 echo "${i} is already included in PATH."
             fi
         fi
     done
-
 }
 
 # ${ZDOTDIR}/${args}/ のディレクトリで *.zsh にマッチしたもの全部読み込み
@@ -37,7 +36,5 @@ function () {
         done
     done
 } "rc.d" "rc.local" "rc.private"
-
-export PATH
 
 compinit -d "${XDG_CACHE_HOME}/zsh/zcompdump"
