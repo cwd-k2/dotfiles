@@ -9,6 +9,7 @@ if [[ -d "${EXTRA_APPS_HOME}/zplugin" ]] ; then
 
     zplugin light "supercrabtree/k"
     zplugin light "b4b4r07/enhancd"
+    zplugin light "zsh-users/zsh-autosuggestions"
 
     autoload -Uz _zplugin
     (( ${+_comps} )) && _comps[zplugin]=_zplugin
