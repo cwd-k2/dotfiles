@@ -13,7 +13,11 @@ function precmd {
     __tmp_path_indicator
 }
 
-pr1="%F{237}%K{248} %m  "
+if [[ -n "${SSH_CLIENT}" ]] ; then
+    pr1="%F{237}%K{248} %m  "
+else
+    pr1="%F{237}%K{248} "
+fi
 
 PROMPT='$pr1$pr2${vcs_info_msg_0_}%K{000}
 $pr3 %F{223}'
