@@ -1,15 +1,3 @@
-export EDITER="vim"
-export PAGER="less"
-export LESSKEY="${XDG_CONFIG_HOME}/less/less"
-export LESSHISTFILE="${XDG_CACHE_HOME}/less/history"
-
-autoload add-zsh-hook
-autoload -Uz select-word-style
-autoload -Uz compinit
-autoload -Uz vcs_info
-autoload -Uz colors
-colors
-
 function prepend_path() {
     local i
 
@@ -30,10 +18,13 @@ function prepend_path() {
 # ここでは rc.d, rc.local, rc.private の順
 function () {
     local i j
+
     for i in "${@}" ; do
-        for j in "${ZDOTDIR}/${i}"/*.zsh ; do
-            . "${j}"
-        done
+        if [[ -d "${ZDOTDIR}/${i}" ]] ; then
+            for j in "${ZDOTDIR}/${i}"/*.zsh ; do
+                . "${j}"
+            done
+        fi
     done
 } "rc.d" "rc.local" "rc.private"
 
