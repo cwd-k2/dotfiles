@@ -7,7 +7,6 @@ if [[ -d "${EXTRA_APPS_HOME}/zplugin" ]] ; then
     export ENHANCD_DIR="${XDG_CACHE_HOME}/enhancd"
     export ENHANCD_COMMAND="ef"
 
-    zplugin light "supercrabtree/k"
     zplugin light "b4b4r07/enhancd"
     zplugin light "zsh-users/zsh-autosuggestions"
 
