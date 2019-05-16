@@ -1,1 +1,1 @@
-export IPYTHONDIR="${XDG_CONFIG_HOME}/ipython"
+export IPYTHONDIR="${EXTRA_APPS_HOME}/ipython"
