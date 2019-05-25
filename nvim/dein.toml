@@ -146,6 +146,13 @@ repo  = 'kchmck/vim-coffee-script'
 on_ft = ['coffee']
 
 #======================================
+# lang/vue
+[[plugins]]
+name  = 'lang/vue/vim-vue'
+repo  = 'posva/vim-vue'
+on_ft = ['vue']
+
+#======================================
 # lang/R
 [[plugins]]
 name  = 'lang/r/vim-R-plugin'
