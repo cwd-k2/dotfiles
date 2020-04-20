@@ -20,6 +20,12 @@ hook_post_update = '''
   let g:dein#plugin.build = cmd
 '''
 
+[[plugins]]
+name = 'lib/LanguageClient-neovim'
+repo = 'autozimu/LanguageClient-neovim'
+rev = 'next'
+build = 'bash install.sh'
+
 #======================================
 # util
 [[plugins]]
