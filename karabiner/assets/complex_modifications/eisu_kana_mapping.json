@@ -1,0 +1,26 @@
+{
+  "title": "英数キー・かなキーの設定",
+  "rules": [
+    {
+      "description": "左右シフト + スペースで英数・かなキーを入力",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "spacebar",
+            "modifiers": { "mandatory": ["left_shift"] }
+          },
+          "to": [ { "key_code": "lang2" } ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "spacebar",
+            "modifiers": { "mandatory": ["right_shift"] }
+          },
+          "to": [ { "key_code": "lang1" } ]
+        }
+      ]
+    }
+  ]
+}
