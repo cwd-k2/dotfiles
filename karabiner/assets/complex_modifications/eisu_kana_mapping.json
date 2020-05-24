@@ -21,6 +21,27 @@
           "to": [ { "key_code": "lang1" } ]
         }
       ]
+    },
+    {
+      "description": "左右シフト + 左右シフトで英数・かなキーを入力",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "right_shift",
+            "modifiers": { "mandatory": ["left_shift"] }
+          },
+          "to": [ { "key_code": "lang1" } ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "left_shift",
+            "modifiers": { "mandatory": ["right_shift"] }
+          },
+          "to": [ { "key_code": "lang2" } ]
+        }
+      ]
     }
   ]
 }
