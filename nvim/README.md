@@ -2,8 +2,6 @@
 
 my neovim configuration files.
 
-highly depending on dein.vim.
-
 ## dependencies
 
 - git
@@ -12,7 +10,7 @@ highly depending on dein.vim.
 
 ## what you have to do
 
-- setup git, python / pip, golang (manually. maybe OS's packaging system is quite a bit useful.)
+- setup git, python / pip, golang (manually)
 - run `pip install neovim`.
 - launch neovim.
     - execute some commands.
@@ -24,4 +22,4 @@ highly depending on dein.vim.
 
 under `rc.d`, non-plugin-related (neovim unique) rc-files are located.
 
-in `pc.d`, plugin-related configuration files are put, based on their groups defined on `dein.toml`.
+in `pc.d`, there are plugin-related configuration files.

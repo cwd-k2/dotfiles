@@ -69,13 +69,6 @@ name = 'util/surround'
 repo = 'tpope/vim-surround'
 
 #======================================
-# lang/markdown
-[[plugins]]
-name  = 'lang/markdown/vim-markdown'
-repo  = 'plasticboy/vim-markdown'
-on_ft = ['markdown']
-
-#======================================
 # lang/html
 [[plugins]]
 name  = 'lang/html/emmet-vim'
@@ -93,13 +86,6 @@ on_ft = ['html', 'xhtml', 'phtml', 'xml']
 name  = 'lang/toml/vim-toml'
 repo  = 'cespare/vim-toml'
 on_ft = ['toml']
-
-#======================================
-# lang/json
-[[plugins]]
-name  = 'lang/json/vim-json'
-repo  = 'elzr/vim-json'
-on_ft = ['json']
 
 #======================================
 # lang/vala
@@ -121,49 +107,6 @@ on_ft = ['c', 'cpp']
 name = 'lang/go/vim-go'
 repo = 'fatih/vim-go'
 on_ft = ['go']
-
-#======================================
-# lang/ruby
-
-#======================================
-# lang/javascript
-[[plugins]]
-name  = 'lang/javascript/vim-javascript'
-repo  = 'pangloss/vim-javascript'
-on_ft = ['javascript']
-
-#======================================
-# lang/typescript
-[[plugins]]
-name  = 'lang/typescript/typescript-vim'
-repo  = 'leafgarland/typescript-vim'
-on_ft = ['typescript']
-
-[[plugins]]
-name  = 'lang/typescript/tsuquyomi'
-repo  = 'Quramy/tsuquyomi'
-on_ft = ['typescript']
-
-#======================================
-# lang/coffeescript
-[[plugins]]
-name  = 'lang/coffeescript/vim-coffee-script'
-repo  = 'kchmck/vim-coffee-script'
-on_ft = ['coffee']
-
-#======================================
-# lang/vue
-[[plugins]]
-name  = 'lang/vue/vim-vue'
-repo  = 'posva/vim-vue'
-on_ft = ['vue']
-
-#======================================
-# lang/R
-[[plugins]]
-name  = 'lang/r/vim-R-plugin'
-repo  = 'vim-scripts/Vim-R-plugin'
-on_ft = ['r']
 
 #======================================
 # ui
