@@ -5,7 +5,7 @@ my neovim configuration files.
 ## dependencies
 
 - git
-- python / pip (I use python 3)
+- python / pip
 - golang
 
 ## what you have to do
