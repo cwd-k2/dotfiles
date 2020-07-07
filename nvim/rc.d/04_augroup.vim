@@ -10,7 +10,7 @@ augroup END
 
 augroup javascript_indentation
     autocmd!
-    autocmd BufNewFile,BufRead *.js,*.jsx,*.ts,*.tsx setlocal tabstop=2 shiftwidth=2
+    autocmd BufNewFile,BufRead *.js,*.jsx,*.ts,*.tsx,*.json setlocal tabstop=2 shiftwidth=2
 augroup END
 
 augroup vimrc_remember_cursor_position

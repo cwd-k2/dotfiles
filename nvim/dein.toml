@@ -71,6 +71,13 @@ repo  = 'alvan/vim-closetag'
 on_ft = ['html', 'xhtml', 'phtml', 'xml']
 
 #======================================
+# lang/typescript
+[[plugins]]
+name  = 'lang/typescript/typescript-vim'
+repo  = 'leafgarland/typescript-vim'
+on_ft = ['ts', 'tsx']
+
+#======================================
 # lang/toml
 [[plugins]]
 name  = 'lang/toml/vim-toml'
@@ -97,6 +104,13 @@ on_ft = ['c', 'cpp']
 name = 'lang/go/vim-go'
 repo = 'fatih/vim-go'
 on_ft = ['go']
+
+#======================================
+# lang/latex
+[[plugins]]
+name = 'lang/latex/vim-latex'
+repo = 'vim-latex/vim-latex'
+on_ft = ['tex']
 
 #======================================
 # ui
