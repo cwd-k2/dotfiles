@@ -74,10 +74,10 @@ if [[ -n ${RICH_PROMPT} ]] ; then
 
 else
 
-    zstyle ':vcs_info:*'     formats       "(%s) <%b%c%u>"
-    zstyle ':vcs_info:*'     actionformats "(%s) <%b|%a%c%u>"
-    zstyle ':vcs_info:git:*' stagedstr     ",!"
-    zstyle ':vcs_info:git:*' unstagedstr   ",*"
+    zstyle ':vcs_info:*'     formats       $'\n(%s) <%b>%c%u'
+    zstyle ':vcs_info:*'     actionformats $'\n(%s) <%b|%a>%c%u'
+    zstyle ':vcs_info:git:*' stagedstr     $' |!|'
+    zstyle ':vcs_info:git:*' unstagedstr   $' |*|'
     zstyle ':vcs_info:git:*' check-for-changes true
 
     function precmd { vcs_info }
