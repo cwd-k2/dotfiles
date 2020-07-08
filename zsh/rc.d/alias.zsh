@@ -2,8 +2,13 @@ alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
 
-alias la='ls -A'
+which exa > /dev/null && alias ls='exa --color=always --icons'
+which bat > /dev/null && alias cat='bat'
+
+alias la='ls -a'
 alias ll='ls -l'
-alias lla='ls -lA'
+
+alias lla='ls -l -a'
 
 alias mkdir='mkdir -p'
+alias rmdir='rmdir -p'

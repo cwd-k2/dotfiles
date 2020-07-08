@@ -9,6 +9,7 @@ set wildmenu
 set showcmd
 set showmode
 set showmatch
+set conceallevel=0
 
 set background=dark
 colorscheme gruvbox

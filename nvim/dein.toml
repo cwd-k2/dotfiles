@@ -5,10 +5,6 @@ name = 'lib/dein'
 repo = 'Shougo/dein.vim'
 
 [[plugins]]
-name = 'lib/unite'
-repo = 'Shougo/unite.vim'
-
-[[plugins]]
 name = 'lib/vimproc'
 repo = 'Shougo/vimproc.vim'
 hook_post_update = '''
@@ -19,12 +15,6 @@ hook_post_update = '''
   endif
   let g:dein#plugin.build = cmd
 '''
-
-[[plugins]]
-name = 'lib/LanguageClient-neovim'
-repo = 'autozimu/LanguageClient-neovim'
-rev = 'next'
-build = 'bash install.sh'
 
 #======================================
 # util
@@ -81,6 +71,13 @@ repo  = 'alvan/vim-closetag'
 on_ft = ['html', 'xhtml', 'phtml', 'xml']
 
 #======================================
+# lang/typescript
+[[plugins]]
+name  = 'lang/typescript/typescript-vim'
+repo  = 'leafgarland/typescript-vim'
+on_ft = ['ts', 'tsx']
+
+#======================================
 # lang/toml
 [[plugins]]
 name  = 'lang/toml/vim-toml'
@@ -107,6 +104,13 @@ on_ft = ['c', 'cpp']
 name = 'lang/go/vim-go'
 repo = 'fatih/vim-go'
 on_ft = ['go']
+
+#======================================
+# lang/latex
+[[plugins]]
+name = 'lang/latex/vim-latex'
+repo = 'vim-latex/vim-latex'
+on_ft = ['tex']
 
 #======================================
 # ui
