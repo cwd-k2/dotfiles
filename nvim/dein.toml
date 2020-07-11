@@ -108,8 +108,8 @@ on_ft = ['go']
 #======================================
 # lang/latex
 [[plugins]]
-name = 'lang/latex/vim-latex'
-repo = 'vim-latex/vim-latex'
+name = 'lang/latex/vimtex'
+repo = 'lervag/vimtex'
 on_ft = ['tex']
 
 #======================================
