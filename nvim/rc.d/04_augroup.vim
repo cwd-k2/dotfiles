@@ -10,7 +10,7 @@ augroup END
 
 augroup cpp_indentation
     autocmd!
-    autocmd FileType cpp,c setlocal tabstop=2 shiftwidth=2
+    autocmd FileType cpp,c setlocal tabstop=2 shiftwidth=2 cinoptions+=>s,(s,m1,:0,g0,j1,J1
 augroup END
 
 augroup javascript_indentation
