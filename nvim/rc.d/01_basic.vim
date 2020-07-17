@@ -5,7 +5,7 @@ set smartindent
 set expandtab
 set tabstop=2
 set shiftwidth=2
-set cinoptions+=>s,(s,m1,:0,g0,j1,J1
+set cinoptions+=>s,(0,Ws,w1,m1,:0,g0,j1,J1
 
 set scrolloff=10
 
