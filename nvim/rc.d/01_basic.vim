@@ -3,8 +3,9 @@ set encoding=utf-8
 set autoindent
 set smartindent
 set expandtab
-set tabstop=4
-set shiftwidth=4
+set tabstop=2
+set shiftwidth=2
+set cinoptions+=>s,(s,m1,:0,g0,j1,J1
 
 set scrolloff=10
 
