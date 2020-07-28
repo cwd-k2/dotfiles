@@ -77,6 +77,12 @@ name  = 'lang/typescript/typescript-vim'
 repo  = 'leafgarland/typescript-vim'
 on_ft = ['ts', 'tsx']
 
+# lang/typescript
+[[plugins]]
+name  = 'lang/typescript/vim-jsx-typescript'
+repo  = 'peitalin/vim-jsx-typescript'
+on_ft = ['jsx', 'tsx']
+
 #======================================
 # lang/toml
 [[plugins]]
