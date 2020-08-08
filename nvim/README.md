@@ -8,7 +8,7 @@ my neovim configuration files.
 
 ## after
 
-- `:CocInstall coc-tsserver coc-json coc-html coc-clangd`
+- `:CocInstall coc-tsserver coc-json coc-html coc-css coc-clangd coc-go`
 
 ## Don't forget...
 
