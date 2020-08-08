@@ -4,18 +4,6 @@
 name = 'lib/dein'
 repo = 'Shougo/dein.vim'
 
-[[plugins]]
-name = 'lib/vimproc'
-repo = 'Shougo/vimproc.vim'
-hook_post_update = '''
-  if executable('gmake')
-    let cmd = 'gmake'
-  else
-    let cmd = 'make'
-  endif
-  let g:dein#plugin.build = cmd
-'''
-
 #======================================
 # util
 [[plugins]]
@@ -47,16 +35,57 @@ name = 'util/deoplete'
 repo = 'Shougo/deoplete.nvim'
 
 [[plugins]]
-name = 'util/neosnippet'
-repo = 'Shougo/neosnippet.vim'
-
-[[plugins]]
-name = 'util/neosnippet-snippets'
-repo = 'Shougo/neosnippet-snippets'
-
-[[plugins]]
 name = 'util/surround'
 repo = 'tpope/vim-surround'
+
+#======================================
+# ui
+[[plugins]]
+name = 'ui/gruvbox'
+repo = 'morhetz/gruvbox'
+
+[[plugins]]
+name = 'ui/vim-trailing-whitespace'
+repo = 'bronson/vim-trailing-whitespace'
+
+[[plugins]]
+name    = 'ui/vim-airline'
+repo    = 'vim-airline/vim-airline'
+depends = ['ui/vim-airline-themes']
+
+[[plugins]]
+name = 'ui/vim-airline-themes'
+repo = 'vim-airline/vim-airline-themes'
+
+[[plugins]]
+name = 'ui/tagbar'
+repo = 'majutsushi/tagbar'
+
+[[plugins]]
+name = 'ui/indentLine'
+repo = 'Yggdroot/indentLine'
+
+[[plugins]]
+name = 'ui/nerdtree'
+repo = 'scrooloose/nerdtree'
+
+[[plugins]]
+name    = 'ui/vim-nerdtree-tabs'
+repo    = 'jistr/vim-nerdtree-tabs'
+depends = ['ui/nerdtree']
+
+[[plugins]]
+name    = 'ui/nerdtree-git-plugin'
+repo    = 'Xuyuanp/nerdtree-git-plugin'
+depends = ['ui/nerdtree']
+
+[[plugins]]
+name  = 'ui/goyo'
+repo  = 'junegunn/goyo.vim'
+
+[[plugins]]
+name = 'ui/vim-devicons'
+repo = 'ryanoasis/vim-devicons'
 
 #======================================
 # lang/html
@@ -117,52 +146,3 @@ on_ft = ['go']
 name = 'lang/latex/vimtex'
 repo = 'lervag/vimtex'
 on_ft = ['tex']
-
-#======================================
-# ui
-[[plugins]]
-name = 'ui/gruvbox'
-repo = 'morhetz/gruvbox'
-
-[[plugins]]
-name = 'ui/vim-trailing-whitespace'
-repo = 'bronson/vim-trailing-whitespace'
-
-[[plugins]]
-name    = 'ui/vim-airline'
-repo    = 'vim-airline/vim-airline'
-depends = ['ui/vim-airline-themes']
-
-[[plugins]]
-name = 'ui/vim-airline-themes'
-repo = 'vim-airline/vim-airline-themes'
-
-[[plugins]]
-name = 'ui/tagbar'
-repo = 'majutsushi/tagbar'
-
-[[plugins]]
-name = 'ui/indentLine'
-repo = 'Yggdroot/indentLine'
-
-[[plugins]]
-name = 'ui/nerdtree'
-repo = 'scrooloose/nerdtree'
-
-[[plugins]]
-name    = 'ui/vim-nerdtree-tabs'
-repo    = 'jistr/vim-nerdtree-tabs'
-depends = ['ui/nerdtree']
-
-[[plugins]]
-name    = 'ui/nerdtree-git-plugin'
-repo    = 'Xuyuanp/nerdtree-git-plugin'
-depends = ['ui/nerdtree']
-
-[[plugins]]
-name  = 'ui/goyo'
-repo  = 'junegunn/goyo.vim'
-
-[[plugins]]
-name = 'ui/vim-devicons'
-repo = 'ryanoasis/vim-devicons'
