@@ -6,4 +6,8 @@ augroup END
 augroup cpp_change_theme
   autocmd!
   autocmd FileType cpp colorscheme minimalist
+  autocmd FileType cpp highlight Normal ctermbg=none
+  autocmd FileType cpp highlight Nontext ctermbg=none
+  autocmd FileType cpp highlight Pmenu ctermbg=95
+  autocmd FileType cpp AirlineTheme minimalist
 augroup END

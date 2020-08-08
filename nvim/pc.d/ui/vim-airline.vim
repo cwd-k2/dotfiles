@@ -6,7 +6,7 @@ let g:airline#extensions#tagbar#enabled = 1
 let g:airline#extensions#anzu#enabled = 1
 let g:airline_skip_empty_sections = 1
 
-let g:airline_theme = 'minimalist'
+let g:airline_theme = 'gruvbox'
 
 if !exists('g:airline_symbols')
   let g:airline_symbols = {}
