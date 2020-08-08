@@ -47,6 +47,10 @@ name = 'ui/minimalist'
 repo = 'dikiaap/minimalist'
 
 [[plugins]]
+name = 'ui/onedark'
+repo = 'joshdick/onedark.vim'
+
+[[plugins]]
 name = 'ui/vim-trailing-whitespace'
 repo = 'bronson/vim-trailing-whitespace'
 
