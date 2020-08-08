@@ -21,3 +21,8 @@ set belloff=all
 
 set splitright
 set splitbelow
+
+set hidden
+set updatetime=300
+set shortmess+=c
+set signcolumn=yes
