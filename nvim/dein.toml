@@ -43,6 +43,10 @@ name = 'ui/gruvbox'
 repo = 'morhetz/gruvbox'
 
 [[plugins]]
+name = 'ui/minimalist'
+repo = 'dikiaap/minimalist'
+
+[[plugins]]
 name = 'ui/vim-trailing-whitespace'
 repo = 'bronson/vim-trailing-whitespace'
 
@@ -84,6 +88,18 @@ repo  = 'junegunn/goyo.vim'
 [[plugins]]
 name = 'ui/vim-devicons'
 repo = 'ryanoasis/vim-devicons'
+
+#======================================
+# lang/c++
+[[plugins]]
+name  = 'lang/c++/lsp-cxx-highlight'
+repo  = 'jackguo380/vim-lsp-cxx-highlight'
+on_ft = ['cpp', 'cc']
+
+[[plugins]]
+name  = 'lang/c++/cpp-modern'
+repo  = 'bfrg/vim-cpp-modern'
+on_ft = ['cpp', 'cc']
 
 #======================================
 # lang/html
