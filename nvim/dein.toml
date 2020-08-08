@@ -98,12 +98,12 @@ repo = 'ryanoasis/vim-devicons'
 [[plugins]]
 name  = 'lang/c++/lsp-cxx-highlight'
 repo  = 'jackguo380/vim-lsp-cxx-highlight'
-on_ft = ['cpp', 'cc']
+on_ft = ['cpp', 'c']
 
 [[plugins]]
 name  = 'lang/c++/cpp-modern'
 repo  = 'bfrg/vim-cpp-modern'
-on_ft = ['cpp', 'cc']
+on_ft = ['cpp', 'c']
 
 #======================================
 # lang/html
