@@ -4,15 +4,17 @@
 name = 'lib/dein'
 repo = 'Shougo/dein.vim'
 
+[[plugins]]
+name   = 'lib/coc'
+repo   = 'neoclide/coc.nvim'
+rev    = 'release'
+merged = '0'
+
 #======================================
 # util
 [[plugins]]
 name = 'util/yankround'
 repo = 'LeafCage/yankround.vim'
-
-[[plugins]]
-name = 'util/ale'
-repo = 'w0rp/ale'
 
 [[plugins]]
 name = 'util/accelerated-jk'
@@ -29,10 +31,6 @@ repo = 'tpope/vim-fugitive'
 [[plugins]]
 name = 'util/vim-gitgutter'
 repo = 'airblade/vim-gitgutter'
-
-[[plugins]]
-name = 'util/deoplete'
-repo = 'Shougo/deoplete.nvim'
 
 [[plugins]]
 name = 'util/surround'

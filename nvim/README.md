@@ -4,19 +4,15 @@ my neovim configuration files.
 
 ## dependencies
 
-- git
-- python / pip
-- golang
+- node
 
-## what you have to do
+## after
 
-- setup git, python / pip, golang (manually)
-- run `pip install neovim`.
-- launch neovim.
-    - execute some commands.
-        - run `:UpdateRemotePlugins`.
-        - run `:VimProcInstall`. -- see `:help vimproc`
-        - run `:GoInstallBinaries`.
+- `:CocInstall coc-tsserver coc-json coc-html coc-clangd`
+
+## Don't forget...
+
+- `compile_flags.txt`
 
 ## directory hierarchy
 
