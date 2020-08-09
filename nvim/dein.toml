@@ -36,6 +36,10 @@ repo = 'airblade/vim-gitgutter'
 name = 'util/surround'
 repo = 'tpope/vim-surround'
 
+[[plugins]]
+name = 'util/deol'
+repo = 'Shougo/deol.nvim'
+
 #======================================
 # ui
 [[plugins]]
