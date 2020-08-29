@@ -109,6 +109,11 @@ name  = 'lang/c++/cpp-modern'
 repo  = 'bfrg/vim-cpp-modern'
 on_ft = ['cpp', 'c']
 
+[[plugins]]
+name  = 'lang/c++/clang-format'
+repo  = 'rhysd/vim-clang-format'
+on_ft = ['cpp', 'c']
+
 #======================================
 # lang/html
 [[plugins]]
