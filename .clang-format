@@ -14,17 +14,12 @@ ColumnLimit: '80'
 
 SortIncludes: true
 IncludeBlocks: Preserve
-IncludeCategories:
-  - Regex:           '^"(llvm|llvm-c|clang|clang-c)/'
-    Priority:        2
-    SortPriority:    2
-  - Regex:           '^(<|"(gtest|gmock|isl|json)/)'
-    Priority:        3
-  - Regex:           '<[[:alnum:].]+>'
-    Priority:        4
-  - Regex:           '.*'
-    Priority:        1
-    SortPriority:    0
+# IncludeCategories:
+#   - Regex:           '<[[:alnum:].]+>'
+#     Priority:        2
+#   - Regex:           '.*'
+#     Priority:        1
+#     SortPriority:    0
 
 AlignAfterOpenBracket: AlwaysBreak
 AlignConsecutiveMacros: true
