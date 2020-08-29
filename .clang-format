@@ -5,12 +5,12 @@ Standard: Auto
 DisableFormat: false
 
 UseTab: Never
-TabWidth: '2'
-IndentWidth: '2'
-AccessModifierOffset: '-2'
+TabWidth: 2
+IndentWidth: 2
+AccessModifierOffset: -2
 IndentCaseLabels: false
 
-ColumnLimit: '80'
+ColumnLimit: 80
 
 SortIncludes: true
 IncludeBlocks: Preserve
@@ -43,7 +43,7 @@ AllowShortLoopsOnASingleLine: true
 AlwaysBreakAfterDefinitionReturnType: None
 AlwaysBreakAfterReturnType: None
 AlwaysBreakBeforeMultilineStrings: true
-AlwaysBreakTemplateDeclarations: 'Yes'
+AlwaysBreakTemplateDeclarations: Yes
 
 BinPackArguments: true
 BinPackParameters: false
