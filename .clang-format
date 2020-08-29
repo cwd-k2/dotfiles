@@ -40,7 +40,7 @@ AllowAllParametersOfDeclarationOnNextLine: 'true'
 AllowShortBlocksOnASingleLine: 'true'
 AllowShortCaseLabelsOnASingleLine: 'true'
 AllowShortFunctionsOnASingleLine: InlineOnly
-AllowShortIfStatementsOnASingleLine: Always
+AllowShortIfStatementsOnASingleLine: WithoutElse
 AllowShortLambdasOnASingleLine: Empty
 AllowShortLoopsOnASingleLine: 'true'
 
@@ -51,11 +51,14 @@ AlwaysBreakTemplateDeclarations: 'Yes'
 
 BinPackArguments: 'true'
 BinPackParameters: 'false'
+
 BreakBeforeBinaryOperators: NonAssignment
 BreakBeforeTernaryOperators: 'true'
+BreakBeforeBraces: Attach
 
 BreakConstructorInitializers: BeforeComma
 BreakInheritanceList: BeforeComma
+
 ConstructorInitializerAllOnOneLineOrOnePerLine: 'false'
 SpaceBeforeCtorInitializerColon: 'true'
 SpaceBeforeInheritanceColon: 'true'

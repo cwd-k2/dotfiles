@@ -40,6 +40,10 @@ repo = 'tpope/vim-surround'
 name = 'util/deol'
 repo = 'Shougo/deol.nvim'
 
+[[plugins]]
+name = 'util/auto-pairs'
+repo = 'jiangmiao/auto-pairs'
+
 #======================================
 # ui
 [[plugins]]
