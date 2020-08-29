@@ -2,17 +2,17 @@
 Language: Cpp
 Standard: Auto
 
-DisableFormat: 'false'
+DisableFormat: false
 
 UseTab: Never
 TabWidth: '2'
 IndentWidth: '2'
 AccessModifierOffset: '-2'
-IndentCaseLabels: 'false'
+IndentCaseLabels: false
 
 ColumnLimit: '80'
 
-SortIncludes: 'true'
+SortIncludes: true
 IncludeBlocks: Preserve
 IncludeCategories:
   - Regex:           '^"(llvm|llvm-c|clang|clang-c)/'
@@ -27,65 +27,85 @@ IncludeCategories:
     SortPriority:    0
 
 AlignAfterOpenBracket: AlwaysBreak
-AlignConsecutiveMacros: 'true'
-AlignConsecutiveAssignments: 'true'
-AlignConsecutiveDeclarations: 'true'
+AlignConsecutiveMacros: true
+AlignConsecutiveAssignments: true
+AlignConsecutiveDeclarations: true
 AlignEscapedNewlines: Left
-AlignOperands: 'true'
-AlignTrailingComments: 'true'
+AlignOperands: true
+AlignTrailingComments: true
 
-AllowAllArgumentsOnNextLine: 'true'
-AllowAllConstructorInitializersOnNextLine: 'true'
-AllowAllParametersOfDeclarationOnNextLine: 'true'
-AllowShortBlocksOnASingleLine: 'true'
-AllowShortCaseLabelsOnASingleLine: 'true'
+AllowAllArgumentsOnNextLine: true
+AllowAllConstructorInitializersOnNextLine: true
+AllowAllParametersOfDeclarationOnNextLine: true
+
+AllowShortBlocksOnASingleLine: Empty
+AllowShortCaseLabelsOnASingleLine: true
 AllowShortFunctionsOnASingleLine: InlineOnly
 AllowShortIfStatementsOnASingleLine: WithoutElse
 AllowShortLambdasOnASingleLine: Empty
-AllowShortLoopsOnASingleLine: 'true'
+AllowShortLoopsOnASingleLine: true
 
 AlwaysBreakAfterDefinitionReturnType: None
 AlwaysBreakAfterReturnType: None
-AlwaysBreakBeforeMultilineStrings: 'true'
+AlwaysBreakBeforeMultilineStrings: true
 AlwaysBreakTemplateDeclarations: 'Yes'
 
-BinPackArguments: 'true'
-BinPackParameters: 'false'
+BinPackArguments: true
+BinPackParameters: false
 
 BreakBeforeBinaryOperators: NonAssignment
-BreakBeforeTernaryOperators: 'true'
-BreakBeforeBraces: Attach
+BreakBeforeTernaryOperators: true
+
+BreakBeforeBraces: Custom
+BraceWrapping:
+  AfterCaseLabel: false
+  AfterClass: false
+  AfterControlStatement: Never
+  AfterEnum: false
+  AfterFunction: false
+  AfterNamespace: false
+  AfterStruct: false
+  AfterUnion: false
+  AfterExternBlock: false
+  BeforeCatch: true
+  BeforeElse: true
+  # BeforeLambdaBody: false
+  # BeforeWhile: false
+  IndentBraces: false
+  SplitEmptyFunction: false
+  SplitEmptyRecord: false
+  SplitEmptyNamespace: false
 
 BreakConstructorInitializers: BeforeComma
 BreakInheritanceList: BeforeComma
 
-ConstructorInitializerAllOnOneLineOrOnePerLine: 'false'
-SpaceBeforeCtorInitializerColon: 'true'
-SpaceBeforeInheritanceColon: 'true'
+ConstructorInitializerAllOnOneLineOrOnePerLine: false
+SpaceBeforeCtorInitializerColon: true
+SpaceBeforeInheritanceColon: true
 
-CompactNamespaces: 'false'
-Cpp11BracedListStyle: 'false'
-DerivePointerAlignment: 'false'
+CompactNamespaces: false
+Cpp11BracedListStyle: false
+DerivePointerAlignment: false
 IndentPPDirectives: AfterHash
-IndentWrappedFunctionNames: 'false'
-KeepEmptyLinesAtTheStartOfBlocks: 'false'
+IndentWrappedFunctionNames: false
+KeepEmptyLinesAtTheStartOfBlocks: false
 NamespaceIndentation: All
 
 PointerAlignment: Left
-ReflowComments: 'true'
+ReflowComments: true
 
-SortUsingDeclarations: 'true'
+SortUsingDeclarations: true
 
 SpaceBeforeParens: Always
-SpaceBeforeRangeBasedForLoopColon: 'true'
-SpaceBeforeAssignmentOperators: 'true'
-SpaceBeforeCpp11BracedList: 'true'
+SpaceBeforeRangeBasedForLoopColon: true
+SpaceBeforeAssignmentOperators: true
+SpaceBeforeCpp11BracedList: true
 
-SpaceAfterCStyleCast: 'true'
-SpaceAfterLogicalNot: 'false'
-SpaceAfterTemplateKeyword: 'true'
+SpaceAfterCStyleCast: true
+SpaceAfterLogicalNot: false
+SpaceAfterTemplateKeyword: true
 
-SpaceInEmptyParentheses: 'false'
-SpacesInAngles: 'false'
-SpacesInParentheses: 'false'
-SpacesInSquareBrackets: 'false'
+SpaceInEmptyParentheses: false
+SpacesInAngles: false
+SpacesInParentheses: false
+SpacesInSquareBrackets: false
