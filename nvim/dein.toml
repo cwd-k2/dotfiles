@@ -119,6 +119,13 @@ repo  = 'rhysd/vim-clang-format'
 on_ft = ['cpp', 'c']
 
 #======================================
+# lang/haskell
+[[plugins]]
+name  = 'lang/haskell/haskell'
+repo  = 'neovimhaskell/haskell-vim'
+on_ft = ['haskell']
+
+#======================================
 # lang/html
 [[plugins]]
 name  = 'lang/html/emmet-vim'
