@@ -21,11 +21,11 @@ name = 'util/accelerated-jk'
 repo = 'rhysd/accelerated-jk'
 
 [[plugins]]
-name = 'util/vim-commentary'
+name = 'util/commentary'
 repo = 'tpope/vim-commentary'
 
 [[plugins]]
-name = 'util/vim-fugitive'
+name = 'util/fugitive'
 repo = 'tpope/vim-fugitive'
 
 [[plugins]]
@@ -59,16 +59,16 @@ name = 'ui/onedark'
 repo = 'joshdick/onedark.vim'
 
 [[plugins]]
-name = 'ui/vim-trailing-whitespace'
+name = 'ui/trailing-whitespace'
 repo = 'bronson/vim-trailing-whitespace'
 
 [[plugins]]
-name    = 'ui/vim-airline'
+name    = 'ui/airline'
 repo    = 'vim-airline/vim-airline'
 depends = ['ui/vim-airline-themes']
 
 [[plugins]]
-name = 'ui/vim-airline-themes'
+name = 'ui/airline-themes'
 repo = 'vim-airline/vim-airline-themes'
 
 [[plugins]]
@@ -84,7 +84,7 @@ name = 'ui/nerdtree'
 repo = 'scrooloose/nerdtree'
 
 [[plugins]]
-name    = 'ui/vim-nerdtree-tabs'
+name    = 'ui/nerdtree-tabs'
 repo    = 'jistr/vim-nerdtree-tabs'
 depends = ['ui/nerdtree']
 
@@ -98,7 +98,7 @@ name  = 'ui/goyo'
 repo  = 'junegunn/goyo.vim'
 
 [[plugins]]
-name = 'ui/vim-devicons'
+name = 'ui/devicons'
 repo = 'ryanoasis/vim-devicons'
 
 #======================================
@@ -106,11 +106,6 @@ repo = 'ryanoasis/vim-devicons'
 [[plugins]]
 name  = 'lang/c++/lsp-cxx-highlight'
 repo  = 'jackguo380/vim-lsp-cxx-highlight'
-on_ft = ['cpp', 'c']
-
-[[plugins]]
-name  = 'lang/c++/cpp-modern'
-repo  = 'bfrg/vim-cpp-modern'
 on_ft = ['cpp', 'c']
 
 [[plugins]]
@@ -128,32 +123,32 @@ on_ft = ['haskell']
 #======================================
 # lang/html
 [[plugins]]
-name  = 'lang/html/emmet-vim'
+name  = 'lang/html/emmet'
 repo  = 'mattn/emmet-vim'
 on_ft = ['html', 'xhtml', 'phtml', 'xml']
 
 [[plugins]]
-name  = 'lang/html/vim-closetag'
+name  = 'lang/html/closetag'
 repo  = 'alvan/vim-closetag'
 on_ft = ['html', 'xhtml', 'phtml', 'xml']
 
 #======================================
 # lang/typescript
 [[plugins]]
-name  = 'lang/typescript/typescript-vim'
+name  = 'lang/typescript/typescript'
 repo  = 'leafgarland/typescript-vim'
 on_ft = ['ts', 'tsx']
 
 # lang/typescript
 [[plugins]]
-name  = 'lang/typescript/vim-jsx-typescript'
+name  = 'lang/typescript/jsx-typescript'
 repo  = 'peitalin/vim-jsx-typescript'
 on_ft = ['jsx', 'tsx']
 
 #======================================
 # lang/toml
 [[plugins]]
-name  = 'lang/toml/vim-toml'
+name  = 'lang/toml/toml'
 repo  = 'cespare/vim-toml'
 on_ft = ['toml']
 
@@ -167,20 +162,20 @@ on_ft = ['vala']
 #======================================
 # lang/swift
 [[plugins]]
-name  = 'lang/swift/swiftc'
+name  = 'lang/swift/swift'
 repo  = 'keith/swift.vim'
 on_ft = ['swift']
 
 #======================================
 # lang/go
 [[plugins]]
-name = 'lang/go/vim-go'
+name = 'lang/go/go'
 repo = 'fatih/vim-go'
 on_ft = ['go']
 
 #======================================
 # lang/latex
 [[plugins]]
-name = 'lang/latex/vimtex'
+name = 'lang/latex/tex'
 repo = 'lervag/vimtex'
 on_ft = ['tex']
