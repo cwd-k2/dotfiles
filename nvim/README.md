@@ -5,6 +5,10 @@ my neovim configuration files.
 ## dependencies
 
 - node
+- python3
+```sh
+$ pip3 install neovim --user
+```
 
 ## after
 
