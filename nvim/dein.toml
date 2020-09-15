@@ -29,7 +29,7 @@ name = 'util/fugitive'
 repo = 'tpope/vim-fugitive'
 
 [[plugins]]
-name = 'util/vim-gitgutter'
+name = 'util/gitgutter'
 repo = 'airblade/vim-gitgutter'
 
 [[plugins]]
@@ -76,7 +76,7 @@ name = 'ui/tagbar'
 repo = 'majutsushi/tagbar'
 
 [[plugins]]
-name = 'ui/indentLine'
+name = 'ui/indent-line'
 repo = 'Yggdroot/indentLine'
 
 [[plugins]]
@@ -89,7 +89,7 @@ repo    = 'jistr/vim-nerdtree-tabs'
 depends = ['ui/nerdtree']
 
 [[plugins]]
-name    = 'ui/nerdtree-git-plugin'
+name    = 'ui/nerdtree-git'
 repo    = 'Xuyuanp/nerdtree-git-plugin'
 depends = ['ui/nerdtree']
 
