@@ -10,3 +10,5 @@ function! Writing()
     set scrolloff=20
     colorscheme industry
 endfunction
+
+nnoremap <silent>,w :<C-u>call Writing()<CR>

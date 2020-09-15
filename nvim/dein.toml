@@ -59,8 +59,8 @@ name = 'ui/onedark'
 repo = 'joshdick/onedark.vim'
 
 [[plugins]]
-name = 'ui/trailing-whitespace'
-repo = 'bronson/vim-trailing-whitespace'
+name = 'ui/better-whitespace'
+repo = 'ntpeters/vim-better-whitespace'
 
 [[plugins]]
 name    = 'ui/airline'
@@ -72,30 +72,24 @@ name = 'ui/airline-themes'
 repo = 'vim-airline/vim-airline-themes'
 
 [[plugins]]
-name = 'ui/tagbar'
-repo = 'majutsushi/tagbar'
+name = 'ui/defx'
+repo = 'Shougo/defx.nvim'
 
 [[plugins]]
-name = 'ui/indent-line'
+name = 'ui/defx-icons'
+repo = 'kristijanhusak/defx-icons'
+
+[[plugins]]
+name = 'ui/defx-git'
+repo = 'kristijanhusak/defx-git'
+
+[[plugins]]
+name = 'ui/indentline'
 repo = 'Yggdroot/indentLine'
 
 [[plugins]]
-name = 'ui/nerdtree'
-repo = 'scrooloose/nerdtree'
-
-[[plugins]]
-name    = 'ui/nerdtree-tabs'
-repo    = 'jistr/vim-nerdtree-tabs'
-depends = ['ui/nerdtree']
-
-[[plugins]]
-name    = 'ui/nerdtree-git'
-repo    = 'Xuyuanp/nerdtree-git-plugin'
-depends = ['ui/nerdtree']
-
-[[plugins]]
-name  = 'ui/goyo'
-repo  = 'junegunn/goyo.vim'
+name = 'ui/goyo'
+repo = 'junegunn/goyo.vim'
 
 [[plugins]]
 name = 'ui/devicons'
