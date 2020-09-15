@@ -95,6 +95,10 @@ repo = 'junegunn/goyo.vim'
 name = 'ui/devicons'
 repo = 'ryanoasis/vim-devicons'
 
+[[plugins]]
+name = 'ui/vista'
+repo = 'liuchengxu/vista.vim'
+
 #======================================
 # lang/c++
 [[plugins]]
