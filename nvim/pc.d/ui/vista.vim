@@ -1,2 +1,3 @@
 let g:vista_default_executive = 'coc'
-nnoremap <silent>,v :<C-u>Vista<CR>
+let g:vista_sidebar_width     = 40
+nnoremap <silent>,v :<C-u>Vista!!<CR>
