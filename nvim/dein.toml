@@ -118,6 +118,11 @@ name  = 'lang/haskell/haskell'
 repo  = 'neovimhaskell/haskell-vim'
 on_ft = ['haskell']
 
+[[plugins]]
+name  = 'lang/haskell/stylish-haskell'
+repo  = 'nbouscal/vim-stylish-haskell'
+on_ft = ['haskell']
+
 #======================================
 # lang/html
 [[plugins]]
