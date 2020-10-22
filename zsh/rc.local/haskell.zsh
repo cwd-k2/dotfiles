@@ -1,1 +1,2 @@
-prepend_path ~/.cabal/bin
+export CABAL_DIR=${EXTRA_APPS_HOME}/cabal
+prepend_path ${CABAL_DIR}/bin
