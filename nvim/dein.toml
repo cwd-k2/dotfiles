@@ -136,6 +136,13 @@ repo  = 'alvan/vim-closetag'
 on_ft = ['html', 'xhtml', 'phtml', 'xml']
 
 #======================================
+# lang/pug
+[[plugins]]
+name  = 'lang/pug/pug'
+repo  = 'digitaltoad/vim-pug'
+on_ft = ['pug']
+
+#======================================
 # lang/typescript
 [[plugins]]
 name  = 'lang/typescript/typescript'
