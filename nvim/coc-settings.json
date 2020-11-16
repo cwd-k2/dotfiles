@@ -13,5 +13,6 @@
       "filetypes": ["haskell", "lhaskell"],
       "rootPatterns": ["*.cabal", "stack.yaml", "cabal.project", "package.yaml", "hie.yaml"]
     }
-  }
+  },
+  "explorer.icon.enableNerdfont": true
 }

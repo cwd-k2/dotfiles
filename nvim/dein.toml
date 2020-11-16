@@ -60,18 +60,6 @@ name = 'ui/airline-themes'
 repo = 'vim-airline/vim-airline-themes'
 
 [[plugins]]
-name = 'ui/defx'
-repo = 'Shougo/defx.nvim'
-
-[[plugins]]
-name = 'ui/defx-icons'
-repo = 'kristijanhusak/defx-icons'
-
-[[plugins]]
-name = 'ui/defx-git'
-repo = 'kristijanhusak/defx-git'
-
-[[plugins]]
 name = 'ui/indentline'
 repo = 'Yggdroot/indentLine'
 

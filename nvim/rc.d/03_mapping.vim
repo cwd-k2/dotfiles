@@ -18,10 +18,5 @@ nmap N Nzzzn
 
 nnoremap <silent>T  :call SplitTerm()<CR>
 nnoremap <silent>,t :call SplitTerm()<CR>
-function! SplitTerm()
-  split | resize 15 | set winfixheight | se nonumber | startinsert | terminal
-endfunction
 tnoremap <silent><ESC> <C-\><C-n><C-w><C-p>
 tnoremap <silent><C-l> <C-\><C-n>:resize 15<CR>:startinsert<CR>
-au TermClose * close | silent! AirlineRefresh
-au BufEnter  * if &buftype == 'terminal' | startinsert | endif

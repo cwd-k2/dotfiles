@@ -8,3 +8,6 @@
 "        if filereadable(l:p_file) | exec 'source '. l:p_file | endif
 "    endfor
 "endfunction
+function! SplitTerm()
+  split | resize 15 | set winfixheight | se nonumber | startinsert | terminal
+endfunction

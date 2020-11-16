@@ -120,5 +120,7 @@ nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 
+nnoremap <silent>,f :<C-u>CocCommand explorer<CR>
+
 let g:coc_snippet_next = '<c-i>'
 let g:coc_snippet_prev = '<c-o>'
