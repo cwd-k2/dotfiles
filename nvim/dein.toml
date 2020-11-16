@@ -43,14 +43,6 @@ repo = 'jiangmiao/auto-pairs'
 #======================================
 # ui
 [[plugins]]
-name = 'ui/gruvbox'
-repo = 'morhetz/gruvbox'
-
-[[plugins]]
-name = 'ui/minimalist'
-repo = 'dikiaap/minimalist'
-
-[[plugins]]
 name = 'ui/onedark'
 repo = 'joshdick/onedark.vim'
 
@@ -82,10 +74,6 @@ repo = 'kristijanhusak/defx-git'
 [[plugins]]
 name = 'ui/indentline'
 repo = 'Yggdroot/indentLine'
-
-[[plugins]]
-name = 'ui/goyo'
-repo = 'junegunn/goyo.vim'
 
 [[plugins]]
 name = 'ui/devicons'
