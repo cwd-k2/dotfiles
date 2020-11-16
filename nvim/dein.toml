@@ -37,10 +37,6 @@ name = 'util/surround'
 repo = 'tpope/vim-surround'
 
 [[plugins]]
-name = 'util/deol'
-repo = 'Shougo/deol.nvim'
-
-[[plugins]]
 name = 'util/auto-pairs'
 repo = 'jiangmiao/auto-pairs'
 
