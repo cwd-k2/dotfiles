@@ -4,7 +4,8 @@
   "languageserver": {
     "swift": {
       "command": "sourcekit-lsp",
-      "filetypes": ["swift"]
+      "filetypes": ["swift"],
+      "rootPatterns": ["Package.swift"]
     },
     "haskell": {
       "command": "haskell-language-server-wrapper",
