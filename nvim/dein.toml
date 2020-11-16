@@ -163,13 +163,6 @@ repo  = 'cespare/vim-toml'
 on_ft = ['toml']
 
 #======================================
-# lang/vala
-[[plugins]]
-name  = 'lang/vala/vala'
-repo  = 'arrufat/vala.vim'
-on_ft = ['vala']
-
-#======================================
 # lang/swift
 [[plugins]]
 name  = 'lang/swift/swift'
