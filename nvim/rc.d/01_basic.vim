@@ -23,6 +23,6 @@ set splitright
 set splitbelow
 
 set hidden
-set updatetime=100
+set updatetime=50
 set shortmess+=c
 set signcolumn=yes

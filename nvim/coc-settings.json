@@ -12,6 +12,12 @@
       "args": ["--lsp"],
       "filetypes": ["haskell", "lhaskell"],
       "rootPatterns": ["*.cabal", "stack.yaml", "cabal.project", "package.yaml", "hie.yaml"]
+    },
+    "golang": {
+      "command": "gopls",
+      "rootPatterns": ["go.mod"],
+      "disableWorkspaceFolders": true,
+      "filetypes": ["go"]
     }
   },
   "explorer.icon.enableNerdfont": true
