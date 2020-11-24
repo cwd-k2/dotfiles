@@ -1,0 +1,9 @@
+backend             : pgf
+font.family         : serif
+text.usetex         : true
+pgf.texsystem       : lualatex
+pgf.rcfonts         : false
+pgf.preamble        : \usepackage[ipaex]{luatexja-preset} \usepackage{lmodern} \usepackage{newpxtext} \usepackage{mathptmx} \usepackage{amssymb, amsmath}
+lines.linewidth     : 0.7
+xtick.direction     : in
+ytick.direction     : in
