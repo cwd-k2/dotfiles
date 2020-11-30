@@ -10,7 +10,7 @@ IndentWidth: 2
 AccessModifierOffset: -2
 IndentCaseLabels: false
 
-ColumnLimit: 80
+ColumnLimit: 120
 
 SortIncludes: true
 IncludeBlocks: Preserve
