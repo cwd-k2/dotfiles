@@ -12,3 +12,7 @@ alias lla='ls -l -a'
 
 alias mkdir='mkdir -p'
 alias rmdir='rmdir -p'
+
+alias dc='docker-compose'
+alias de='docker exec -it'
+alias ly='docker exec -it renv python3'
