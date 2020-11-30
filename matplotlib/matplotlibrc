@@ -7,3 +7,9 @@ pgf.preamble        : \usepackage[ipaex]{luatexja-preset} \usepackage{lmodern} \
 lines.linewidth     : 0.7
 xtick.direction     : in
 ytick.direction     : in
+xtick.minor.visible : true
+ytick.minor.visible : true
+xtick.major.size    : 8
+ytick.major.size    : 8
+xtick.minor.size    : 4
+ytick.minor.size    : 4
