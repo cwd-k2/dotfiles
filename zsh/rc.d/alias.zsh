@@ -2,7 +2,7 @@ alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
 
-which exa > /dev/null && alias ls='exa --color=always --icons --sort=Name'
+which exa > /dev/null && alias ls='exa --color=always --icons --sort=Name --git --group'
 which bat > /dev/null && alias cat='bat'
 
 alias la='ls -a'
