@@ -1,6 +1,8 @@
 {
   "clangd.semanticHighlighting": true,
   "clangd.arguments": ["--header-insertion=iwyu"],
+  "codeLens.enable": true,
+  "diagnostic.virtualText": true,
   "languageserver": {
     "swift": {
       "command": "sourcekit-lsp",
