@@ -8,7 +8,7 @@ repo = 'Shougo/dein.vim'
 name   = 'lib/coc'
 repo   = 'neoclide/coc.nvim'
 rev    = 'release'
-merged = '0'
+merged = 0
 
 #======================================
 # util
