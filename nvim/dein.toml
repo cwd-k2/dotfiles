@@ -40,6 +40,10 @@ repo = 'tpope/vim-surround'
 name = 'util/auto-pairs'
 repo = 'jiangmiao/auto-pairs'
 
+[[plugins]]
+name = 'visual-multi'
+repo = 'mg979/vim-visual-multi'
+
 #======================================
 # ui
 [[plugins]]
