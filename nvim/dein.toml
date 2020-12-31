@@ -44,6 +44,10 @@ repo = 'jiangmiao/auto-pairs'
 name = 'visual-multi'
 repo = 'mg979/vim-visual-multi'
 
+[[plugins]]
+name = 'sonictemplate'
+repo = 'mattn/vim-sonictemplate'
+
 #======================================
 # ui
 [[plugins]]
