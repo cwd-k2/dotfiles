@@ -25,6 +25,10 @@ name = 'util/fugitive'
 repo = 'tpope/vim-fugitive'
 
 [[plugins]]
+name = 'util/repeat'
+repo = 'tpope/vim-repeat'
+
+[[plugins]]
 name = 'util/gitgutter'
 repo = 'airblade/vim-gitgutter'
 
@@ -47,6 +51,10 @@ repo = 'mattn/vim-sonictemplate'
 [[plugins]]
 name = 'util/nerdcommenter'
 repo = 'preservim/nerdcommenter'
+
+[[plugins]]
+name = 'util/expand-region'
+repo = 'terryma/vim-expand-region'
 
 #======================================
 # ui
