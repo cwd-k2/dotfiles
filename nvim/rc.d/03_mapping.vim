@@ -21,4 +21,4 @@ nnoremap <silent>,t :call SplitTerm()<CR>
 tnoremap <silent><ESC> <C-\><C-n><C-w><C-p>
 tnoremap <silent><C-l> <C-\><C-n>:resize 15<CR>:startinsert<CR>
 
-let mapleader = '\<Space>'
+let mapleader = "\<Space>"

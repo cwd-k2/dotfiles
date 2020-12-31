@@ -21,10 +21,6 @@ name = 'util/accelerated-jk'
 repo = 'rhysd/accelerated-jk'
 
 [[plugins]]
-name = 'util/commentary'
-repo = 'tpope/vim-commentary'
-
-[[plugins]]
 name = 'util/fugitive'
 repo = 'tpope/vim-fugitive'
 
@@ -41,12 +37,16 @@ name = 'util/auto-pairs'
 repo = 'jiangmiao/auto-pairs'
 
 [[plugins]]
-name = 'visual-multi'
+name = 'util/visual-multi'
 repo = 'mg979/vim-visual-multi'
 
 [[plugins]]
-name = 'sonictemplate'
+name = 'util/sonictemplate'
 repo = 'mattn/vim-sonictemplate'
+
+[[plugins]]
+name = 'util/nerdcommenter'
+repo = 'preservim/nerdcommenter'
 
 #======================================
 # ui
