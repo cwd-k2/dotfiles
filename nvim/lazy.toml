@@ -71,14 +71,13 @@ on_ft = ['swift']
 #======================================
 # lang/go
 [[plugins]]
-name = 'lang/go/go'
-repo = 'fatih/vim-go'
+name  = 'lang/go/go'
+repo  = 'fatih/vim-go'
 on_ft = ['go']
 
 #======================================
 # lang/latex
 [[plugins]]
-name = 'lang/latex/tex'
-repo = 'lervag/vimtex'
+name  = 'lang/latex/tex'
+repo  = 'lervag/vimtex'
 on_ft = ['tex']
-
