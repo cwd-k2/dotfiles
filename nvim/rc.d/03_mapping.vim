@@ -5,6 +5,14 @@ cnoremap <C-k> <ESC>
 nnoremap <silent>,j :call append(line('.'), '')<CR>
 nnoremap <silent>,k :call append(line('.')-1, '')<CR>
 
+nnoremap j gj
+nnoremap k gk
+nnoremap gj j
+nnoremap gk k
+
+nnoremap gh 0
+nnoremap gl $
+
 cnoremap <C-p> <Up>
 cnoremap <C-n> <Down>
 cnoremap <C-f> <Right>
