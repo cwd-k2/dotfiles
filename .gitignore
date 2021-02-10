@@ -1,3 +1,4 @@
 zsh/rc.private/*
 zsh/.zprofile
 zsh/.zcompcache
+zsh/.zcompdump
