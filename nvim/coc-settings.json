@@ -39,6 +39,19 @@
       "trace.server": "verbose",
       "filetypes": ["go"],
       "rootPatterns": ["go.mod"]
+    },
+    "purescript": {
+      "command": "purescript-language-server",
+      "args": ["--stdio"],
+      "filetypes": ["purescript"],
+      "trace.server": "off",
+      "rootPatterns": ["bower.json", "psc-package.json", "spago.dhall"],
+      "settings": {
+        "purescript": {
+          "addSpagoSources": true,
+          "addNpmPath": true
+        }
+      }
     }
   },
   "explorer.icon.enableNerdfont": true

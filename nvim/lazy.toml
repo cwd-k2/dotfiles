@@ -23,6 +23,13 @@ repo  = 'nbouscal/vim-stylish-haskell'
 on_ft = ['haskell']
 
 #======================================
+# lang/purescript
+[[plugins]]
+name  = 'lang/purescript/purescript'
+repo  = 'purescript-contrib/purescript-vim'
+on_ft = ['purescript']
+
+#======================================
 # lang/html
 [[plugins]]
 name  = 'lang/html/emmet'
