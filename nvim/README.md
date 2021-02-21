@@ -18,6 +18,7 @@ $ go get -u golang.org/x/tools/gopls
 ## Don't forget...
 
 - `compile_flags.txt`
+- set `Allow clipboard access to terminal apps` for iTerm2 (macOS)
 
 ## directory hierarchy
 
