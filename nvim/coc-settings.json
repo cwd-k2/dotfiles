@@ -13,6 +13,11 @@
   ],
   "codeLens.enable": true,
   "diagnostic.virtualText": true,
+  "eslint.options": {
+    "rules": {
+      "@typescript-eslint/no-unused-vars": false
+    }
+  },
   "prettier.eslintIntegration": true,
   "clangd.semanticHighlighting": true,
   "clangd.arguments": ["--header-insertion=iwyu"],
