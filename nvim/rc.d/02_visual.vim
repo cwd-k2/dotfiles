@@ -12,6 +12,5 @@ set showmatch
 set conceallevel=0
 
 set background=dark
-colorscheme onedark
 
 set statusline=%F%m%r%h%w%=(%{&ff}/%Y)\ (line\ %l\/%L,\ col\ %c)\

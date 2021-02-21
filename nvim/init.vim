@@ -1,5 +1,5 @@
 if &compatible
-    set nocompatible
+  set nocompatible
 endif
 
 let g:cache_home  = empty($XDG_CACHE_HOME)  ? expand('~/.cache')  : $XDG_CACHE_HOME

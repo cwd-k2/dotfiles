@@ -85,6 +85,9 @@ repo = 'tomtom/tcomment_vim'
 [[plugins]]
 name = 'ui/onedark'
 repo = 'joshdick/onedark.vim'
+hook_add = '''
+  colorscheme onedark
+'''
 
 [[plugins]]
 name = 'ui/better-whitespace'
