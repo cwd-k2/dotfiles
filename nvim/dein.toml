@@ -49,8 +49,8 @@ name = 'util/sonictemplate'
 repo = 'mattn/vim-sonictemplate'
 
 [[plugins]]
-name = 'util/nerdcommenter'
-repo = 'preservim/nerdcommenter'
+name = 'util/tcomment'
+repo = 'tomtom/tcomment_vim'
 
 [[plugins]]
 name = 'util/expand-region'
