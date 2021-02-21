@@ -90,3 +90,6 @@ repo = 'liuchengxu/vista.vim'
 [[plugins]]
 name = 'ui/rainbow-parentheses'
 repo = 'junegunn/rainbow_parentheses.vim'
+hook_add = '''
+  autocmd FileType * RainbowParentheses
+'''
