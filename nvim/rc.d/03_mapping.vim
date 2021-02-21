@@ -33,6 +33,8 @@ cnoremap <C-a> <Home>
 cnoremap <C-e> <End>
 cnoremap <C-d> <Del>
 
+nnoremap <silent> <leader>y :<C-u>%y+<CR>
+
 nmap n nzzzn
 nmap N Nzzzn
 
