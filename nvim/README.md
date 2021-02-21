@@ -5,14 +5,15 @@ my neovim configuration files.
 ## dependencies
 
 - node
-- python3
+
 ```sh
-$ pip3 install neovim --user
+$ go get -u golang.org/x/tools/cmd/goimports
+$ go get -u golang.org/x/tools/gopls
 ```
 
 ## after
 
-- `:CocInstall coc-tsserver coc-json coc-html coc-css coc-clangd coc-go`
+- `:CocInstall coc-tsserver coc-json coc-html coc-css coc-eslint coc-prettier coc-explorer coc-clangd`
 
 ## Don't forget...
 
