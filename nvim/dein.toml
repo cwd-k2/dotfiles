@@ -21,10 +21,6 @@ name = 'util/accelerated-jk'
 repo = 'rhysd/accelerated-jk'
 
 [[plugins]]
-name = 'util/fugitive'
-repo = 'tpope/vim-fugitive'
-
-[[plugins]]
 name = 'util/repeat'
 repo = 'tpope/vim-repeat'
 
