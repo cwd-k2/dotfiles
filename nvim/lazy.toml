@@ -124,8 +124,8 @@ on_ft = ['swift']
 #======================================
 # lang/go
 [[plugins]]
-name  = 'lang/go/go'
-repo  = 'fatih/vim-go'
+name  = 'lang/go/goimports'
+repo  = 'mattn/vim-goimports'
 on_ft = ['go']
 
 #======================================
