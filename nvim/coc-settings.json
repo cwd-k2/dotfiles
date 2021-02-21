@@ -13,6 +13,7 @@
   ],
   "codeLens.enable": true,
   "diagnostic.virtualText": true,
+
   "eslint.options": {
     "rules": {
       "@typescript-eslint/no-unused-vars": false
@@ -20,8 +21,10 @@
   },
   "eslint.autoFixOnSave": true,
   "prettier.eslintIntegration": true,
+
   "clangd.semanticHighlighting": true,
   "clangd.arguments": ["--header-insertion=iwyu"],
+
   "languageserver": {
     "swift": {
       "command": "sourcekit-lsp",
@@ -29,6 +32,7 @@
       "trace.server": "verbose",
       "rootPatterns": ["Package.swift"]
     },
+
     "haskell": {
       "command": "haskell-language-server-wrapper",
       "args": ["--lsp"],
@@ -42,6 +46,7 @@
         "cabal.project"
       ]
     },
+
     "golang": {
       "command": "gopls",
       "disableWorkspaceFolders": true,
@@ -49,6 +54,7 @@
       "filetypes": ["go"],
       "rootPatterns": ["go.mod"]
     },
+
     "purescript": {
       "command": "purescript-language-server",
       "args": ["--stdio"],
@@ -63,10 +69,11 @@
       }
     }
   },
+
   "explorer.icon.enableNerdfont": true,
   "explorer.file.hiddenRules": {
     "extensions": ["o", "a", "obj", "pyc"],
-    "filenames": [],
+    "filenames": [".git"],
     "patternMatches": []
   }
 }
