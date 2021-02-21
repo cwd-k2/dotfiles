@@ -19,10 +19,10 @@ hook_add = '''
   let g:yankround_dir = g:nvim_cache . '/yankround'
   let g:yankround_max_history = 100
 
-  nnoremap p <Plug>(yankround-p)
-  nnoremap P <Plug>(yankround-P)
-  nnoremap <C-p> <Plug>(yankround-prev)
-  nnoremap <C-n> <Plug>(yankround-next)
+  nmap p <Plug>(yankround-p)
+  nmap P <Plug>(yankround-P)
+  nmap <C-p> <Plug>(yankround-prev)
+  nmap <C-n> <Plug>(yankround-next)
 '''
 
 [[plugins]]
@@ -34,8 +34,8 @@ hook_add = '''
         \ ]
   let g:accelerated_jk_acceleration_limit = 100
 
-  nnoremap j <Plug>(accelerated_jk_gj)
-  nnoremap k <Plug>(accelerated_jk_gk)
+  nmap j <Plug>(accelerated_jk_gj)
+  nmap k <Plug>(accelerated_jk_gk)
 '''
 
 [[plugins]]
