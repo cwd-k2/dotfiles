@@ -10,8 +10,8 @@ name  = 'lang/c++/clang-format'
 repo  = 'rhysd/vim-clang-format'
 on_ft = ['cpp', 'c']
 hook_source = '''
-  let g:clang_format#detect_style_file = 1
-  let g:clang_format#auto_format = 1
+  let g:clang_format#detect_style_file           = 1
+  let g:clang_format#auto_format                 = 1
   let g:clang_format#auto_format_on_insert_leave = 0
 '''
 
@@ -22,13 +22,13 @@ name  = 'lang/haskell/haskell'
 repo  = 'neovimhaskell/haskell-vim'
 on_ft = ['haskell']
 hook_source = '''
-  let g:haskell_enable_quantification = 1
-  let g:haskell_enable_recursivedo = 1
-  let g:haskell_enable_arrowsyntax = 1
+  let g:haskell_enable_quantification   = 1
+  let g:haskell_enable_recursivedo      = 1
+  let g:haskell_enable_arrowsyntax      = 1
   let g:haskell_enable_pattern_synonyms = 1
-  let g:haskell_enable_typeroles = 1
-  let g:haskell_enable_static_pointers = 1
-  let g:haskell_backpack = 1
+  let g:haskell_enable_typeroles        = 1
+  let g:haskell_enable_static_pointers  = 1
+  let g:haskell_backpack                = 1
 
   let g:haskell_indent_disable          = 0
   let g:haskell_indent_if               = 3

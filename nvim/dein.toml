@@ -15,10 +15,28 @@ merged = 0
 [[plugins]]
 name = 'util/yankround'
 repo = 'LeafCage/yankround.vim'
+hook_add = '''
+  let g:yankround_dir = g:nvim_cache . '/yankround'
+  let g:yankround_max_history = 100
+
+  nnoremap p <Plug>(yankround-p)
+  nnoremap P <Plug>(yankround-P)
+  nnoremap <C-p> <Plug>(yankround-prev)
+  nnoremap <C-n> <Plug>(yankround-next)
+'''
 
 [[plugins]]
 name = 'util/accelerated-jk'
 repo = 'rhysd/accelerated-jk'
+hook_add = '''
+  let g:accelerated_jk_acceleration_table = [
+        \ 7, 12, 17, 21, 24, 26, 28, 30
+        \ ]
+  let g:accelerated_jk_acceleration_limit = 100
+
+  nnoremap j <Plug>(accelerated_jk_gj)
+  nnoremap k <Plug>(accelerated_jk_gk)
+'''
 
 [[plugins]]
 name = 'util/repeat'
@@ -27,6 +45,9 @@ repo = 'tpope/vim-repeat'
 [[plugins]]
 name = 'util/gitgutter'
 repo = 'airblade/vim-gitgutter'
+hook_add = '''
+  let g:gitgutter_map_keys = 0
+'''
 
 [[plugins]]
 name = 'util/surround'
@@ -35,14 +56,32 @@ repo = 'tpope/vim-surround'
 [[plugins]]
 name = 'util/auto-pairs'
 repo = 'jiangmiao/auto-pairs'
+hook_add = '''
+  augroup haskellautopair
+    autocmd!
+    au FileType haskell let b:AutoPairs =
+          \ AutoPairsDefine(
+          \   { '{-' : '-}', '{-#' : '#-}' },
+          \   ["'"]
+          \ )
+  augroup END
+'''
 
 [[plugins]]
 name = 'util/visual-multi'
 repo = 'mg979/vim-visual-multi'
+hook_add = '''
+  let g:VM_custom_remaps = { '<C-k>': '<ESC>' }
+'''
 
 [[plugins]]
 name = 'util/sonictemplate'
 repo = 'mattn/vim-sonictemplate'
+hook_add = '''
+  let g:sonictemplate_vim_template_dir = [
+        \ '~/.opt/templates'
+        \ ]
+'''
 
 [[plugins]]
 name = 'util/tcomment'
@@ -57,11 +96,42 @@ repo = 'joshdick/onedark.vim'
 [[plugins]]
 name = 'ui/better-whitespace'
 repo = 'ntpeters/vim-better-whitespace'
+hook_add = '''
+  let g:better_whitespace_enabled = 1
+  let g:strip_whitespace_on_save  = 1
+  let g:strip_whitespace_confirm  = 0
+'''
 
 [[plugins]]
 name    = 'ui/airline'
 repo    = 'vim-airline/vim-airline'
 depends = ['ui/vim-airline-themes']
+hook_add = '''
+  let g:airline_powerline_fonts = 1
+
+  let g:airline#extensions#branch#enabled  = 1
+  let g:airline#extensions#tabline#enabled = 1
+  let g:airline#extensions#tagbar#enabled  = 1
+  let g:airline#extensions#anzu#enabled    = 1
+  let g:airline_skip_empty_sections        = 1
+
+  let g:airline_theme = 'distinguished'
+
+  if !exists('g:airline_symbols')
+    let g:airline_symbols = {}
+  endif
+
+  let g:airline#extensions#tabline#left_sep     = ''
+  let g:airline#extensions#tabline#left_alt_sep = ''
+
+  let g:airline_left_sep         = ''
+  let g:airline_left_alt_sep     = ''
+  let g:airline_right_sep        = ''
+  let g:airline_right_alt_sep    = ''
+  let g:airline_symbols.branch   = ''
+  let g:airline_symbols.readonly = ''
+  let g:airline_symbols.linenr   = ''
+'''
 
 [[plugins]]
 name = 'ui/airline-themes'
@@ -92,6 +162,14 @@ repo = 'ryanoasis/vim-devicons'
 [[plugins]]
 name = 'ui/vista'
 repo = 'liuchengxu/vista.vim'
+hook_add = '''
+  let g:vista_default_executive    = 'coc'
+  let g:vista_sidebar_width        = 40
+  let g:vista_icon_indent          = ["╰─▸ ", "├─▸ "]
+  let g:vista_blink                = [0, 0]
+  let g:vista#renderer#enable_icon = 0
+  nnoremap <silent> <leader>v :<C-u>Vista!!<CR>
+'''
 
 [[plugins]]
 name = 'ui/rainbow-parentheses'
