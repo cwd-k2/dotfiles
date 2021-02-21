@@ -52,10 +52,6 @@ repo = 'mattn/vim-sonictemplate'
 name = 'util/tcomment'
 repo = 'tomtom/tcomment_vim'
 
-[[plugins]]
-name = 'util/expand-region'
-repo = 'terryma/vim-expand-region'
-
 #======================================
 # ui
 [[plugins]]
