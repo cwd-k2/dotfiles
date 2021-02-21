@@ -18,6 +18,7 @@
       "@typescript-eslint/no-unused-vars": false
     }
   },
+  "eslint.autoFixOnSave": true,
   "prettier.eslintIntegration": true,
   "clangd.semanticHighlighting": true,
   "clangd.arguments": ["--header-insertion=iwyu"],
