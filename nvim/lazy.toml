@@ -49,17 +49,25 @@ repo  = 'digitaltoad/vim-pug'
 on_ft = ['pug']
 
 #======================================
-# lang/typescript
+# lang/javascript
 [[plugins]]
-name  = 'lang/typescript/typescript'
-repo  = 'leafgarland/typescript-vim'
-on_ft = ['ts', 'tsx']
+name  = 'lang/javascript/js'
+repo  = 'yuezk/vim-js'
+on_ft = ['javascript', 'javascriptreact', 'javascript.jsx']
 
+#======================================
 # lang/typescript
 [[plugins]]
-name  = 'lang/typescript/jsx-typescript'
-repo  = 'peitalin/vim-jsx-typescript'
-on_ft = ['jsx', 'tsx']
+name  = 'lang/typescript/yats'
+repo  = 'HerringtonDarkholme/yats.vim'
+on_ft = ['typescript', 'typescriptreact', 'typescript.tsx']
+
+#======================================
+# lang/jsx
+[[plugins]]
+name  = 'lang/javascript/jsx-pretty'
+repo  = 'maxmellon/vim-jsx-pretty'
+on_ft = ['javascriptreact', 'typescriptreact', 'javascript.jsx', 'typescript.tsx']
 
 #======================================
 # lang/toml
