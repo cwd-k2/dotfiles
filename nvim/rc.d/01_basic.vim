@@ -26,3 +26,5 @@ set hidden
 set updatetime=50
 set shortmess+=c
 set signcolumn=yes
+
+set clipboard+=unnamedplus
