@@ -68,13 +68,6 @@ hook_add = '''
 '''
 
 [[plugins]]
-name = 'util/visual-multi'
-repo = 'mg979/vim-visual-multi'
-hook_add = '''
-  let g:VM_custom_remaps = { '<C-k>': '<ESC>' }
-'''
-
-[[plugins]]
 name = 'util/sonictemplate'
 repo = 'mattn/vim-sonictemplate'
 hook_add = '''
