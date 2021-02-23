@@ -72,7 +72,10 @@ hook_source = '''
 [[plugins]]
 name  = 'lang/html/emmet'
 repo  = 'mattn/emmet-vim'
-on_ft = ['html', 'xhtml', 'phtml', 'xml']
+on_ft = [
+  'html', 'xhtml', 'phtml', 'xml',
+  'javascriptreact', 'typescriptreact',
+]
 
 [[plugins]]
 name  = 'lang/html/closetag'
@@ -91,21 +94,21 @@ on_ft = ['pug']
 [[plugins]]
 name  = 'lang/javascript/js'
 repo  = 'yuezk/vim-js'
-on_ft = ['javascript', 'javascriptreact', 'javascript.jsx']
+on_ft = ['javascript', 'javascriptreact']
 
 #======================================
 # lang/typescript
 [[plugins]]
 name  = 'lang/typescript/yats'
 repo  = 'HerringtonDarkholme/yats.vim'
-on_ft = ['typescript', 'typescriptreact', 'typescript.tsx']
+on_ft = ['typescript', 'typescriptreact']
 
 #======================================
 # lang/jsx
 [[plugins]]
 name  = 'lang/javascript/jsx-pretty'
 repo  = 'maxmellon/vim-jsx-pretty'
-on_ft = ['javascriptreact', 'typescriptreact', 'javascript.jsx', 'typescript.tsx']
+on_ft = ['javascriptreact', 'typescriptreact']
 
 #======================================
 # lang/toml
