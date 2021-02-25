@@ -92,8 +92,8 @@ on_ft = ['pug']
 #======================================
 # lang/javascript
 [[plugins]]
-name  = 'lang/javascript/js'
-repo  = 'yuezk/vim-js'
+name = 'lang/javascript/yajs'
+repo = 'othree/yajs.vim'
 on_ft = ['javascript', 'javascriptreact']
 
 #======================================
