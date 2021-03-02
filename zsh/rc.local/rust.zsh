@@ -1,5 +1,4 @@
 export CARGO_HOME="${EXTRA_APPS_HOME}/cargo"
+export RUSTUP_HOME="${EXTRA_APPS_HOME}/rustup"
 
-if [[ -d "${CARGO_HOME}" ]] ; then
-  prepend_path "${CARGO_HOME}/bin" > /dev/null
-fi
+prepend_path "${CARGO_HOME}/bin" > /dev/null
