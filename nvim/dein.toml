@@ -172,5 +172,8 @@ name = 'ui/rainbow-parentheses'
 repo = 'junegunn/rainbow_parentheses.vim'
 hook_add = '''
   let g:rainbow#pairs=[['(', ')'], ['[', ']']]
-  autocmd FileType * RainbowParentheses
+  augroup parentheses
+    autocmd!
+    autocmd FileType * RainbowParentheses
+  augroup END
 '''
