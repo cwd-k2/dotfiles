@@ -164,16 +164,5 @@ hook_add = '''
   let g:vista_icon_indent          = ["╰─▸ ", "├─▸ "]
   let g:vista_blink                = [0, 0]
   let g:vista#renderer#enable_icon = 0
-  nnoremap <silent> <leader>v :<C-u>Vista!!<CR>
-'''
-
-[[plugins]]
-name = 'ui/rainbow-parentheses'
-repo = 'junegunn/rainbow_parentheses.vim'
-hook_add = '''
-  let g:rainbow#pairs=[['(', ')'], ['[', ']']]
-  augroup parentheses
-    autocmd!
-    autocmd FileType * RainbowParentheses
-  augroup END
+  nnoremap <silent> <leader>v <cmd>Vista!!<CR>
 '''
