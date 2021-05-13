@@ -5,16 +5,6 @@ name  = 'lang/c++/lsp-cxx-highlight'
 repo  = 'jackguo380/vim-lsp-cxx-highlight'
 on_ft = ['cpp', 'c']
 
-[[plugins]]
-name  = 'lang/c++/clang-format'
-repo  = 'rhysd/vim-clang-format'
-on_ft = ['cpp', 'c']
-hook_source = '''
-  let g:clang_format#detect_style_file           = 1
-  let g:clang_format#auto_format                 = 1
-  let g:clang_format#auto_format_on_insert_leave = 0
-'''
-
 #======================================
 # lang/haskell
 [[plugins]]
@@ -61,49 +51,6 @@ hook_source = '''
   let g:purescript_indent_after_bare_where = 2
   let g:purescript_indent_do               = 3
 '''
-
-#======================================
-# lang/html
-[[plugins]]
-name  = 'lang/html/emmet'
-repo  = 'mattn/emmet-vim'
-on_ft = [
-  'html', 'xhtml', 'phtml', 'xml',
-  'javascriptreact', 'typescriptreact',
-]
-
-[[plugins]]
-name  = 'lang/html/closetag'
-repo  = 'alvan/vim-closetag'
-on_ft = ['html', 'xhtml', 'phtml', 'xml']
-
-#======================================
-# lang/pug
-[[plugins]]
-name  = 'lang/pug/pug'
-repo  = 'digitaltoad/vim-pug'
-on_ft = ['pug']
-
-#======================================
-# lang/javascript
-[[plugins]]
-name = 'lang/javascript/yajs'
-repo = 'othree/yajs.vim'
-on_ft = ['javascript', 'javascriptreact']
-
-#======================================
-# lang/typescript
-[[plugins]]
-name  = 'lang/typescript/yats'
-repo  = 'HerringtonDarkholme/yats.vim'
-on_ft = ['typescript', 'typescriptreact']
-
-#======================================
-# lang/jsx
-[[plugins]]
-name  = 'lang/javascript/jsx-pretty'
-repo  = 'maxmellon/vim-jsx-pretty'
-on_ft = ['javascriptreact', 'typescriptreact']
 
 #======================================
 # lang/toml
