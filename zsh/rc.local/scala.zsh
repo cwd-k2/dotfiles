@@ -1,0 +1,16 @@
+sbt_opts_arr=(
+  -Dsbt.ivy.home="${XDG_CACHE_HOME}/ivy"
+  -Dsbt.boot.directory="${XDG_CACHE_HOME}/sbt/boot"
+  -Dsbt.preloaded="${XDG_CACHE_HOME}/sbt/preloaded"
+  -Dsbt.global.base="${XDG_CACHE_HOME}/sbt"
+  -Dsbt.global.zinc="${XDG_CACHE_HOME}/sbt/zinc"
+  -Dsbt.global.staging="${XDG_CACHE_HOME}/sbt/staging"
+  -Dsbt.global.plugins="${XDG_CONFIG_HOME}/sbt/plugins"
+  -Dsbt.global.settings="${XDG_CONFIG_HOME}/sbt/global"
+  -Dsbt.dependency.base="${XDG_CACHE_HOME}/sbt/dependency"
+  -Dsbt.repository.config="${XDG_CONFIG_HOME}/sbt/repositories"
+  -Divy.home="${XDG_CACHE_HOME}/ivy"
+  -Divy.cache.home="${XDG_CACHE_HOME}/ivy"
+  -Divy.settings.dir="${XDG_CONFIG_HOME}/ivy"
+)
+export SBT_OPTS="${sbt_opts_arr}"
