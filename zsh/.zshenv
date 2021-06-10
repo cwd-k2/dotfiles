@@ -9,4 +9,4 @@ export ZDOTDIR="${XDG_CONFIG_HOME}/zsh"
 export LANG="en_US.UTF-8"
 export LC_ALL="en_US.UTF-8"
 
-export EXTRA_APPS_HOME="${HOME}/.opt"
+export EXTRA_APPS_HOME="${HOME}/.local/opt"
