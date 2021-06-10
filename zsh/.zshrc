@@ -26,7 +26,7 @@ function () {
       done
     fi
   done
-} "rc.d" "rc.local" "rc.private"
+} "env.d" "rc.d" "rc.private"
 
 prepend_path "${HOME}/.local/bin" "${HOME}/.local/sbin"
 compinit -u -d "${XDG_CACHE_HOME}/zsh/zcompdump"
