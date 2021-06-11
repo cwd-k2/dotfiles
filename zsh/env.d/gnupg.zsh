@@ -1,1 +1,1 @@
-#export GNUPGHOME="${EXTRA_APPS_HOME}/gnupg"
+export GNUPGHOME="${EXTRA_APPS_HOME}/gnupg"
