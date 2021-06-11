@@ -1,1 +1,1 @@
-export IPYTHONDIR="${EXTRA_APPS_HOME}/ipython"
+export IPYTHONDIR="${EXTRA_VARS_HOME}/ipython"
