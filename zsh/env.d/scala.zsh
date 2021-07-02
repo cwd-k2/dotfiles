@@ -12,5 +12,6 @@ sbt_opts_arr=(
   -Divy.home="${XDG_CACHE_HOME}/ivy"
   -Divy.cache.home="${XDG_CACHE_HOME}/ivy"
   -Divy.settings.dir="${XDG_CONFIG_HOME}/ivy"
+  -DG8_HOME="${XDG_CACHE_HOME}/g8"
 )
 export SBT_OPTS="${sbt_opts_arr}"
