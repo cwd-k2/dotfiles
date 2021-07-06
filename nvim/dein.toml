@@ -10,53 +10,53 @@ repo   = 'neoclide/coc.nvim'
 rev    = 'release'
 merged = 0
 hook_add = '''
-  let g:coc_global_extensions = [
-        \ 'coc-explorer',
-        \ 'coc-prettier',
-        \ 'coc-json',
-        \ 'coc-vimlsp',
-        \ ]
+let g:coc_global_extensions = [
+      \ 'coc-explorer',
+      \ 'coc-prettier',
+      \ 'coc-json',
+      \ 'coc-vimlsp',
+      \ ]
 
-  nnoremap <nowait><expr> <C-f> coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-f>"
-  nnoremap <nowait><expr> <C-b> coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-b>"
+nnoremap <nowait><expr> <C-f> coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-f>"
+nnoremap <nowait><expr> <C-b> coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-b>"
 
-  " Use <c-space> to trigger completion.
-  inoremap <silent><expr> <c-space> coc#refresh()
+" Use <c-space> to trigger completion.
+inoremap <silent><expr> <c-space> coc#refresh()
 
-  " Use <cr> to confirm completion, `<C-g>u` means break undo chain at current
-  " position. Coc only does snippet and additional edit on confirm.
-  " <cr> could be remapped by other vim plugin, try `:verbose imap <CR>`.
-  if exists('*complete_info')
-    inoremap <expr> <cr> complete_info()["selected"] != "-1" ? "\<C-y>" : "\<C-g>u\<CR>"
+" Use <cr> to confirm completion, `<C-g>u` means break undo chain at current
+" position. Coc only does snippet and additional edit on confirm.
+" <cr> could be remapped by other vim plugin, try `:verbose imap <CR>`.
+if exists('*complete_info')
+  inoremap <expr> <cr> complete_info()["selected"] != "-1" ? "\<C-y>" : "\<C-g>u\<CR>"
+else
+  inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+endif
+
+" Use `[g` and `]g` to navigate diagnostics
+" Use `:CocDiagnostics` to get all diagnostics of current buffer in location list.
+nmap <silent> [g <Plug>(coc-diagnostic-prev)
+nmap <silent> ]g <Plug>(coc-diagnostic-next)
+
+nnoremap <silent> K <cmd>call <SID>show_documentation()<CR>
+
+function! s:show_documentation()
+  if (index(['vim','help'], &filetype) >= 0)
+    execute 'h '.expand('<cword>')
   else
-    inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+    call CocAction('doHover')
   endif
+endfunction
 
-  " Use `[g` and `]g` to navigate diagnostics
-  " Use `:CocDiagnostics` to get all diagnostics of current buffer in location list.
-  nmap <silent> [g <Plug>(coc-diagnostic-prev)
-  nmap <silent> ]g <Plug>(coc-diagnostic-next)
+" Highlight the symbol and its references when holding the cursor.
+autocmd CursorHold * silent call CocActionAsync('highlight')
 
-  nnoremap <silent> K <cmd>call <SID>show_documentation()<CR>
+" Symbol renaming.
+nmap <leader>r <Plug>(coc-rename)
 
-  function! s:show_documentation()
-    if (index(['vim','help'], &filetype) >= 0)
-      execute 'h '.expand('<cword>')
-    else
-      call CocAction('doHover')
-    endif
-  endfunction
+nnoremap <silent> <leader>f <cmd>CocCommand explorer<CR>
 
-  " Highlight the symbol and its references when holding the cursor.
-  autocmd CursorHold * silent call CocActionAsync('highlight')
-
-  " Symbol renaming.
-  nmap <leader>r <Plug>(coc-rename)
-
-  nnoremap <silent> <leader>f <cmd>CocCommand explorer<CR>
-
-  let g:coc_snippet_next = '<c-i>'
-  let g:coc_snippet_prev = '<c-o>'
+let g:coc_snippet_next = '<c-i>'
+let g:coc_snippet_prev = '<c-o>'
 '''
 
 #======================================
@@ -65,26 +65,26 @@ hook_add = '''
 name = 'util/yankround'
 repo = 'LeafCage/yankround.vim'
 hook_add = '''
-  let g:yankround_dir = g:nvim_cache . '/yankround'
-  let g:yankround_max_history = 100
+let g:yankround_dir = g:nvim_cache . '/yankround'
+let g:yankround_max_history = 100
 
-  nmap p <Plug>(yankround-p)
-  nmap P <Plug>(yankround-P)
-  nmap <C-p> <Plug>(yankround-prev)
-  nmap <C-n> <Plug>(yankround-next)
+nmap p <Plug>(yankround-p)
+nmap P <Plug>(yankround-P)
+nmap <C-p> <Plug>(yankround-prev)
+nmap <C-n> <Plug>(yankround-next)
 '''
 
 [[plugins]]
 name = 'util/accelerated-jk'
 repo = 'rhysd/accelerated-jk'
 hook_add = '''
-  let g:accelerated_jk_acceleration_table = [
-        \ 7, 12, 17, 21, 24, 26, 28, 30
-        \ ]
-  let g:accelerated_jk_acceleration_limit = 100
+let g:accelerated_jk_acceleration_table = [
+      \ 7, 12, 17, 21, 24, 26, 28, 30
+      \ ]
+let g:accelerated_jk_acceleration_limit = 100
 
-  nmap j <Plug>(accelerated_jk_gj)
-  nmap k <Plug>(accelerated_jk_gk)
+nmap j <Plug>(accelerated_jk_gj)
+nmap k <Plug>(accelerated_jk_gk)
 '''
 
 [[plugins]]
@@ -95,7 +95,7 @@ repo = 'tpope/vim-repeat'
 name = 'util/gitgutter'
 repo = 'airblade/vim-gitgutter'
 hook_add = '''
-  let g:gitgutter_map_keys = 0
+let g:gitgutter_map_keys = 0
 '''
 
 [[plugins]]
@@ -106,23 +106,23 @@ repo = 'tpope/vim-surround'
 name = 'util/auto-pairs'
 repo = 'jiangmiao/auto-pairs'
 hook_add = '''
-  augroup haskellautopair
-    autocmd!
-    au FileType haskell let b:AutoPairs =
-          \ AutoPairsDefine(
-          \   { '{-' : '-}', '{-#' : '#-}' },
-          \   ["'"]
-          \ )
-  augroup END
+augroup haskellautopair
+  autocmd!
+  au FileType haskell let b:AutoPairs =
+        \ AutoPairsDefine(
+        \   { '{-' : '-}', '{-#' : '#-}' },
+        \   ["'"]
+        \ )
+augroup END
 '''
 
 [[plugins]]
 name = 'util/sonictemplate'
 repo = 'mattn/vim-sonictemplate'
 hook_add = '''
-  let g:sonictemplate_vim_template_dir = [
-        \ '~/.opt/templates'
-        \ ]
+let g:sonictemplate_vim_template_dir = [
+      \ '~/.opt/templates'
+      \ ]
 '''
 
 [[plugins]]
@@ -135,23 +135,23 @@ repo = 'tomtom/tcomment_vim'
 name = 'ui/onedark'
 repo = 'joshdick/onedark.vim'
 hook_add = '''
-  "colorscheme onedark
+"colorscheme onedark
 '''
 
 [[plugins]]
 name = 'ui/corvine'
 repo = 'arzg/vim-corvine'
 hook_add = '''
-  colorscheme corvine
+colorscheme corvine
 '''
 
 [[plugins]]
 name = 'ui/better-whitespace'
 repo = 'ntpeters/vim-better-whitespace'
 hook_add = '''
-  let g:better_whitespace_enabled = 1
-  let g:strip_whitespace_on_save  = 1
-  let g:strip_whitespace_confirm  = 0
+let g:better_whitespace_enabled = 1
+let g:strip_whitespace_on_save  = 1
+let g:strip_whitespace_confirm  = 0
 '''
 
 [[plugins]]
@@ -159,30 +159,30 @@ name    = 'ui/airline'
 repo    = 'vim-airline/vim-airline'
 depends = ['ui/vim-airline-themes']
 hook_add = '''
-  let g:airline_powerline_fonts = 1
+let g:airline_powerline_fonts = 1
 
-  let g:airline#extensions#branch#enabled  = 1
-  let g:airline#extensions#tabline#enabled = 1
-  let g:airline#extensions#tagbar#enabled  = 1
-  let g:airline#extensions#anzu#enabled    = 1
-  let g:airline_skip_empty_sections        = 1
+let g:airline#extensions#branch#enabled  = 1
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tagbar#enabled  = 1
+let g:airline#extensions#anzu#enabled    = 1
+let g:airline_skip_empty_sections        = 1
 
-  let g:airline_theme = 'distinguished'
+let g:airline_theme = 'distinguished'
 
-  if !exists('g:airline_symbols')
-    let g:airline_symbols = {}
-  endif
+if !exists('g:airline_symbols')
+  let g:airline_symbols = {}
+endif
 
-  let g:airline#extensions#tabline#left_sep     = ''
-  let g:airline#extensions#tabline#left_alt_sep = ''
+let g:airline#extensions#tabline#left_sep     = ''
+let g:airline#extensions#tabline#left_alt_sep = ''
 
-  let g:airline_left_sep         = ''
-  let g:airline_left_alt_sep     = ''
-  let g:airline_right_sep        = ''
-  let g:airline_right_alt_sep    = ''
-  let g:airline_symbols.branch   = ''
-  let g:airline_symbols.readonly = ''
-  let g:airline_symbols.linenr   = ''
+let g:airline_left_sep         = ''
+let g:airline_left_alt_sep     = ''
+let g:airline_right_sep        = ''
+let g:airline_right_alt_sep    = ''
+let g:airline_symbols.branch   = ''
+let g:airline_symbols.readonly = ''
+let g:airline_symbols.linenr   = ''
 '''
 
 [[plugins]]
@@ -193,16 +193,16 @@ repo = 'vim-airline/vim-airline-themes'
 name = 'ui/indent-guides'
 repo = 'nathanaelkane/vim-indent-guides'
 hook_add = '''
-  let g:indent_guides_exclude_filetypes = [
-        \ 'help',
-        \ 'coc-explorer',
-        \ 'haskell',
-        \ 'purescript',
-        \ 'vista'
-        \ ]
-  let g:indent_guides_guide_size  = 1
-  let g:indent_guides_auto_colors = 1
-  let g:indent_guides_enable_on_vim_startup = 1
+let g:indent_guides_exclude_filetypes = [
+      \ 'help',
+      \ 'coc-explorer',
+      \ 'haskell',
+      \ 'purescript',
+      \ 'vista'
+      \ ]
+let g:indent_guides_guide_size  = 1
+let g:indent_guides_auto_colors = 1
+let g:indent_guides_enable_on_vim_startup = 1
 '''
 
 [[plugins]]
