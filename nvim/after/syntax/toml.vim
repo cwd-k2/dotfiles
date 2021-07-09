@@ -6,8 +6,8 @@ syntax include @VIM syntax/vim.vim
 let b:current_syntax = s:bcs
 
 syntax region TomlEmbeddedVim
-      \ start="^hook_\%(add\|source\)\s*=\s*'''\s*$"
-      \ end="^\s*'''\s*$"
+      \ start=/^hook_[a-z]\+\s*=\s*'''\s*$/hs=e+1
+      \ end=/^\s*'''\s*$/he=s-1
       \ contains=@VIM
       \ keepend
 

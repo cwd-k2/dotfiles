@@ -17,41 +17,24 @@ let g:coc_global_extensions = [
       \ 'coc-vimlsp',
       \ ]
 
-nnoremap <nowait><expr> <C-f> coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-f>"
-nnoremap <nowait><expr> <C-b> coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-b>"
+nmap <silent> <leader>do <Plug>(coc-diagnostic-prev)
+nmap <silent> <leader>di <Plug>(coc-diagnostic-next)
+nmap <silent> <leader>r  <Plug>(coc-rename)
 
-" Use <c-space> to trigger completion.
+nnoremap <nowait><expr> <C-f> coc#float#has_scroll() ? coc#float#scroll(1) : "<C-f>"
+nnoremap <nowait><expr> <C-b> coc#float#has_scroll() ? coc#float#scroll(0) : "<C-b>"
+
+nnoremap <silent> K <cmd>call CocAction('doHover')<CR>
+
 inoremap <silent><expr> <c-space> coc#refresh()
 
-" Use <cr> to confirm completion, `<C-g>u` means break undo chain at current
-" position. Coc only does snippet and additional edit on confirm.
-" <cr> could be remapped by other vim plugin, try `:verbose imap <CR>`.
 if exists('*complete_info')
-  inoremap <expr> <cr> complete_info()["selected"] != "-1" ? "\<C-y>" : "\<C-g>u\<CR>"
+  inoremap <nowait><expr> <cr> complete_info()["selected"] != "-1" ? "<C-y>" : "<C-g>u<CR>"
 else
-  inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+  inoremap <nowait><expr> <cr> pumvisible() ? "<C-y>" : "<C-g>u<CR>"
 endif
 
-" Use `[g` and `]g` to navigate diagnostics
-" Use `:CocDiagnostics` to get all diagnostics of current buffer in location list.
-nmap <silent> [g <Plug>(coc-diagnostic-prev)
-nmap <silent> ]g <Plug>(coc-diagnostic-next)
-
-nnoremap <silent> K <cmd>call <SID>show_documentation()<CR>
-
-function! s:show_documentation()
-  if (index(['vim','help'], &filetype) >= 0)
-    execute 'h '.expand('<cword>')
-  else
-    call CocAction('doHover')
-  endif
-endfunction
-
-" Highlight the symbol and its references when holding the cursor.
 autocmd CursorHold * silent call CocActionAsync('highlight')
-
-" Symbol renaming.
-nmap <leader>r <Plug>(coc-rename)
 
 nnoremap <silent> <leader>f <cmd>CocCommand explorer<CR>
 
@@ -68,10 +51,10 @@ hook_add = '''
 let g:yankround_dir = g:nvim_cache . '/yankround'
 let g:yankround_max_history = 100
 
-nmap p <Plug>(yankround-p)
-nmap P <Plug>(yankround-P)
-nmap <C-p> <Plug>(yankround-prev)
-nmap <C-n> <Plug>(yankround-next)
+nmap <nowait> p <Plug>(yankround-p)
+nmap <nowait> P <Plug>(yankround-P)
+nmap <nowait> <C-p> <Plug>(yankround-prev)
+nmap <nowait> <C-n> <Plug>(yankround-next)
 '''
 
 [[plugins]]
@@ -83,8 +66,8 @@ let g:accelerated_jk_acceleration_table = [
       \ ]
 let g:accelerated_jk_acceleration_limit = 100
 
-nmap j <Plug>(accelerated_jk_gj)
-nmap k <Plug>(accelerated_jk_gk)
+nmap <nowait> j <Plug>(accelerated_jk_gj)
+nmap <nowait> k <Plug>(accelerated_jk_gk)
 '''
 
 [[plugins]]
@@ -108,11 +91,13 @@ repo = 'jiangmiao/auto-pairs'
 hook_add = '''
 augroup haskellautopair
   autocmd!
-  au FileType haskell let b:AutoPairs =
-        \ AutoPairsDefine(
-        \   { '{-' : '-}', '{-#' : '#-}' },
-        \   ["'"]
-        \ )
+  au FileType haskell let b:AutoPairs = {
+        \ '"': '"',
+        \ '`': '`',
+        \ '(': ')', '(#': '#)',
+        \ '[': ']', '[|': '|]',
+        \ '{': '}', '{-': '-}', '{-#': '#-}'
+        \ }
 augroup END
 '''
 
@@ -141,6 +126,10 @@ name = 'ui/better-whitespace'
 repo = 'ntpeters/vim-better-whitespace'
 hook_add = '''
 let g:better_whitespace_enabled = 1
+let g:better_whitespace_filetypes_blacklist = [
+      \ 'conf',
+      \ 'coc-explorer',
+      \ ]
 let g:strip_whitespace_on_save  = 1
 let g:strip_whitespace_confirm  = 0
 '''
@@ -186,10 +175,9 @@ repo = 'nathanaelkane/vim-indent-guides'
 hook_add = '''
 let g:indent_guides_exclude_filetypes = [
       \ 'help',
-      \ 'coc-explorer',
       \ 'haskell',
       \ 'purescript',
-      \ 'vista'
+      \ 'coc-explorer',
       \ ]
 let g:indent_guides_guide_size  = 1
 let g:indent_guides_auto_colors = 1

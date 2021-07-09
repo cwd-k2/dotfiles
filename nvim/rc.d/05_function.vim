@@ -9,5 +9,5 @@
 "    endfor
 "endfunction
 function! SplitTerm()
-  split | resize 15 | set winfixheight | se nonumber | startinsert | terminal
+  split | resize 20 | set winfixheight | se nonumber | startinsert | terminal
 endfunction
