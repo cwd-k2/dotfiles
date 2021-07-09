@@ -1,6 +1,8 @@
 # completion strengthen ----------------------------------------------
 select-word-style default
 
+export WORDCHARS=${WORDCHARS:s?/?}
+
 zstyle ':zle:*' word-chars " /=;@:{},|"
 zstyle ':zle:*' word-style unspecified
 
