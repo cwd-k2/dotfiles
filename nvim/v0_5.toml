@@ -69,7 +69,7 @@ let g:nvim_tree_add_trailing    = 1
 let g:nvim_tree_group_empty     = 1
 let g:nvim_tree_lsp_diagnostics = 1
 
-nnoremap <leader>F <cmd>NvimTreeToggle<CR>
+nnoremap <leader>f <cmd>NvimTreeToggle<CR>
 
 lua << LUA
 vim.g.nvim_tree_ignore = {
