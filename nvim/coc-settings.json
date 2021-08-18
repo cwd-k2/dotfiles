@@ -1,15 +1,6 @@
 {
   "coc.preferences.formatOnType": true,
-  "coc.preferences.formatOnSaveFiletypes": [
-    "css",
-    "html",
-    "json",
-    "markdown",
-    "c",
-    "cpp",
-    "rust",
-    "haskell"
-  ],
+  "coc.preferences.formatOnSaveFiletypes": ["css", "html", "json", "markdown", "c", "cpp", "rust", "haskell"],
 
   "codeLens.enable": true,
   "diagnostic.virtualText": true,
@@ -27,6 +18,8 @@
   "clangd.semanticHighlighting": true,
   "clangd.arguments": ["--header-insertion=iwyu"],
 
+  "metals.superMethodLensesEnabled": false,
+
   "languageserver": {
     "swift": {
       "command": "sourcekit-lsp",
@@ -40,13 +33,7 @@
       "args": ["--lsp"],
       "trace.server": "verbose",
       "filetypes": ["haskell", "lhaskell"],
-      "rootPatterns": [
-        "*.cabal",
-        "hie.yaml",
-        "stack.yaml",
-        "package.yaml",
-        "cabal.project"
-      ],
+      "rootPatterns": ["*.cabal", "hie.yaml", "stack.yaml", "package.yaml", "cabal.project"],
       "settings": {
         "haskell": {
           "formattingProvider": "stylish-haskell"
