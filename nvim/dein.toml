@@ -21,17 +21,17 @@ nmap <silent> <leader>do <Plug>(coc-diagnostic-prev)
 nmap <silent> <leader>di <Plug>(coc-diagnostic-next)
 nmap <silent> <leader>r  <Plug>(coc-rename)
 
-nnoremap <nowait><expr> <C-f> coc#float#has_scroll() ? coc#float#scroll(1) : "<C-f>"
-nnoremap <nowait><expr> <C-b> coc#float#has_scroll() ? coc#float#scroll(0) : "<C-b>"
+nnoremap <nowait><expr> <C-f> coc#float#has_scroll() ? coc#float#scroll(1) : '<C-f>'
+nnoremap <nowait><expr> <C-b> coc#float#has_scroll() ? coc#float#scroll(0) : '<C-b>'
 
-nnoremap <silent> K <cmd>call CocAction('doHover')<CR>
+nnoremap <silent> <c-k> <cmd>call CocAction('doHover')<CR>
 
 inoremap <silent><expr> <c-space> coc#refresh()
 
 if exists('*complete_info')
-  inoremap <nowait><expr> <cr> complete_info()["selected"] != "-1" ? "<C-y>" : "<C-g>u<CR>"
+  inoremap <nowait><expr> <cr> complete_info()['selected'] != '-1' ? '<C-y>' : '<C-g>u<CR>'
 else
-  inoremap <nowait><expr> <cr> pumvisible() ? "<C-y>" : "<C-g>u<CR>"
+  inoremap <nowait><expr> <cr> pumvisible() ? '<C-y>' : '<C-g>u<CR>'
 endif
 
 autocmd CursorHold * silent call CocActionAsync('highlight')
