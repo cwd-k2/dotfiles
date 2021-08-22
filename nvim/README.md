@@ -19,6 +19,10 @@ $ go get -u golang.org/x/tools/gopls
 
 - `compile_flags.txt`
 - set `Allow clipboard access to terminal apps` for iTerm2 (macOS)
+- for swift
+  1. clone `github.com/apple/swift`
+  1. `git filter-branch --subdirectory-filter utils/vim HEAD`
+  1. make symbolic links to its `ftplugin/*.vim`, `ftdetect/*.vim` and `syntax/*.vim`
 
 ## directory hierarchy
 
