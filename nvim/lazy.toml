@@ -60,13 +60,6 @@ repo  = 'cespare/vim-toml'
 on_ft = ['toml']
 
 #======================================
-# lang/swift
-[[plugins]]
-name  = 'lang/swift/swift'
-repo  = 'keith/swift.vim'
-on_ft = ['swift']
-
-#======================================
 # lang/go
 [[plugins]]
 name  = 'lang/go/goimports'

@@ -2,3 +2,14 @@ zsh/rc.private/*
 zsh/.zprofile
 zsh/.zcompcache
 zsh/.zcompdump
+
+nvim/ftdetect/sil.vim
+nvim/ftdetect/swift.vim
+nvim/ftdetect/swiftgyb.vim
+
+nvim/ftplugin/swift.vim
+nvim/ftplugin/swiftgyb.vim
+
+nvim/syntax/sil.vim
+nvim/syntax/swift.vim
+nvim/syntax/swiftgyb.vim
