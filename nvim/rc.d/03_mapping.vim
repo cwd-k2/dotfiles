@@ -1,4 +1,4 @@
-let mapleader = '\<space>'
+let mapleader = "\<space>"
 
 inoremap <C-k> <ESC>
 vnoremap <C-k> <ESC>
