@@ -2,3 +2,4 @@ zsh/rc.private/*
 zsh/.zprofile
 zsh/.zcompcache
 zsh/.zcompdump
+zsh/.zsh_sessions
