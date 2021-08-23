@@ -14,11 +14,11 @@ let &runtimepath = g:dein_path . ',' . &runtimepath
 
 if dein#load_state(g:dein_dir)
   call dein#begin(g:dein_dir)
-  call dein#load_toml(g:nvim_dir . '/dein.toml')
-  call dein#load_toml(g:nvim_dir . '/lazy.toml', {'lazy': 1})
+  call dein#load_toml(g:nvim_dir . '/dein/dein.toml')
+  call dein#load_toml(g:nvim_dir . '/dein/lazy.toml', {'lazy': 1})
 
   if has('nvim-0.5')
-    call dein#load_toml(g:nvim_dir . '/v0_5.toml')
+    call dein#load_toml(g:nvim_dir . '/dein/v0_5.toml')
   endif
 
   call dein#end()
