@@ -20,6 +20,12 @@
 
   "metals.superMethodLensesEnabled": false,
 
+  "Lua.workspace.library": {
+    "$VIMRUNTIME/lua": true
+  },
+  "Lua.diagnostics.globals": ["vim"],
+  "Lua.diagnostics.disable": ["lowercase-global"],
+
   "languageserver": {
     "swift": {
       "command": "sourcekit-lsp",
