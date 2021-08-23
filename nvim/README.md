@@ -11,15 +11,11 @@ $ go get -u golang.org/x/tools/cmd/goimports
 $ go get -u golang.org/x/tools/gopls
 ```
 
-## after
+## misc
 
-- `:CocInstall coc-tsserver coc-json coc-html coc-css coc-eslint coc-prettier coc-explorer coc-clangd`
-
-## Don't forget...
-
-- `compile_flags.txt`
-- set `Allow clipboard access to terminal apps` for iTerm2 (macOS)
-- for swift
+- Use `compile_flags.txt`
+- Set `Allow clipboard access to terminal apps` for iTerm2 (macOS)
+- For swift
   1. clone `github.com/apple/swift`
   1. move `utils/vim/{ftplugin,ftdetect,syntax}` to `$XDG_DATA_HOME/nvim/site`
 
