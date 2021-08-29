@@ -27,4 +27,6 @@ set updatetime=50
 set shortmess+=c
 set signcolumn=yes
 
+set autoread
+
 set clipboard+=unnamedplus
