@@ -57,50 +57,20 @@ repo = 'kyazdani42/nvim-tree.lua'
 hook_add = '''
 let g:nvim_tree_width           = 40
 let g:nvim_tree_gitignore       = 1
-let g:nvim_tree_auto_open       = 0
-let g:nvim_tree_auto_close      = 1
-let g:nvim_tree_follow          = 1
+"let g:nvim_tree_auto_open       = 0
+"let g:nvim_tree_follow          = 1
 let g:nvim_tree_indent_markers  = 1
 let g:nvim_tree_git_hl          = 1
-let g:nvim_tree_tab_open        = 1
-let g:nvim_tree_disable_netrw   = 0
-let g:nvim_tree_hijack_netrw    = 0
+"let g:nvim_tree_tab_open        = 1
 let g:nvim_tree_add_trailing    = 1
 let g:nvim_tree_group_empty     = 1
-let g:nvim_tree_lsp_diagnostics = 1
 
 nnoremap <leader>f <cmd>NvimTreeToggle<CR>
 
 lua << LUA
-vim.g.nvim_tree_ignore = {
-  ".git",
-  ".cache",
-  "node_modules",
-}
-vim.g.nvim_tree_icons = {
-  default = " ",
-  symlink = " ",
-  git = {
-    unstaged =  "✗",
-    staged =    "✓",
-    unmerged =  "",
-    renamed =   "➜",
-    untracked = "",
-    deleted =   "",
-    ignored =   "◌"
-  },
-  folder = {
-    default      = "",
-    open         = "",
-    empty        = "",
-    empty_open   = "",
-    symlink      = "",
-    symlink_open = "",
-  },
-}
-
 local cb = require ("nvim-tree.config").nvim_tree_callback
-vim.g.nvim_tree_bindings = {
+
+local list = {
   { key = "<CR>",  cb = cb ("edit")            },
   { key = "o",     cb = cb ("edit")            },
   { key = "i",     cb = cb ("edit")            },
@@ -124,6 +94,47 @@ vim.g.nvim_tree_bindings = {
   { key = "q",     cb = cb ("close")           },
   { key = "I",     cb = cb ("toggle_ignored")  },
   { key = "H",     cb = cb ("toggle_dotfiles") },
+}
+
+require ("nvim-tree").setup {
+  disable_netrw  = false,
+  hijack_netrw   = false,
+
+  auto_close = true,
+
+  lsp_diagnostics = true,
+
+  mappings = {
+    list = list
+  }
+}
+
+vim.g.nvim_tree_ignore = {
+  ".git",
+  ".cache",
+  "node_modules",
+}
+
+vim.g.nvim_tree_icons = {
+  default = " ",
+  symlink = " ",
+  git = {
+    unstaged =  "✗",
+    staged =    "✓",
+    unmerged =  "",
+    renamed =   "➜",
+    untracked = "",
+    deleted =   "",
+    ignored =   "◌"
+  },
+  folder = {
+    default      = "",
+    open         = "",
+    empty        = "",
+    empty_open   = "",
+    symlink      = "",
+    symlink_open = "",
+  },
 }
 LUA
 '''
