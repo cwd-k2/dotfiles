@@ -102,7 +102,7 @@ require ("nvim-tree").setup {
 
   auto_close = true,
 
-  lsp_diagnostics = true,
+  -- lsp_diagnostics = true,
 
   mappings = {
     list = list
