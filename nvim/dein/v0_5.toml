@@ -106,14 +106,15 @@ require ("nvim-tree").setup {
 
   mappings = {
     list = list
+  },
+
+  ignore = {
+    ".git",
+    ".cache",
+    "node_modules",
   }
 }
 
-vim.g.nvim_tree_ignore = {
-  ".git",
-  ".cache",
-  "node_modules",
-}
 
 vim.g.nvim_tree_icons = {
   default = " ",
