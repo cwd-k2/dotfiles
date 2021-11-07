@@ -104,8 +104,10 @@ require ("nvim-tree").setup {
 
   -- lsp_diagnostics = true,
 
-  mappings = {
-    list = list
+  view = {
+    mappings = {
+      list = list
+    },
   },
 
   ignore = {
