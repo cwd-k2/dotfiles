@@ -6,6 +6,13 @@ repo  = 'jackguo380/vim-lsp-cxx-highlight'
 on_ft = ['cpp', 'c']
 
 #======================================
+# lang/julia
+[[plugins]]
+name  = 'lang/julia/julia'
+repo  = 'JuliaEditorSupport/julia-vim'
+on_ft = ['julia']
+
+#======================================
 # lang/haskell
 [[plugins]]
 name  = 'lang/haskell/haskell'
