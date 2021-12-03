@@ -1,10 +1,24 @@
-backend             : pgf
-font.family         : serif
-text.usetex         : true
-pgf.texsystem       : lualatex
-pgf.rcfonts         : false
-pgf.preamble        : \usepackage[ipaex]{luatexja-preset} \usepackage{lmodern} \usepackage{newpxtext} \usepackage{mathptmx} \usepackage{amssymb, amsmath}
-lines.linewidth     : 0.7
+#backend             : pgf
+#font.family         : serif
+#text.usetex         : true
+#pgf.texsystem       : lualatex
+#pgf.rcfonts         : false
+#pgf.preamble        : \usepackage[ipaex]{luatexja-preset} \usepackage{newpxtext} \usepackage{mathptmx} \usepackage{amssymb, amsmath}
+
+font.size   : 18
+font.family : Times New Roman
+
+mathtext.fontset : stix
+
+lines.linewidth : 0.7
+
+figure.titlesize              : 28
+figure.constrained_layout.use : true
+
+axes.grid      : true
+axes.labelsize : 22
+axes.titlesize : 24
+
 xtick.direction     : in
 ytick.direction     : in
 xtick.minor.visible : true
