@@ -5,19 +5,22 @@
 #pgf.rcfonts         : false
 #pgf.preamble        : \usepackage[ipaex]{luatexja-preset} \usepackage{newpxtext} \usepackage{mathptmx} \usepackage{amssymb, amsmath}
 
-font.size   : 16
+font.size   : 14
 font.family : Times New Roman
 
 mathtext.fontset : stix
 
 #lines.linewidth : 0.7
 
-figure.titlesize              : 28
+figure.titlesize              : 24
 figure.constrained_layout.use : true
 
 axes.grid      : true
-axes.labelsize : 22
-axes.titlesize : 24
+axes.labelsize : 20
+axes.titlesize : 20
+
+legend.fontsize : 14
+legend.fancybox : false
 
 xtick.direction     : in
 ytick.direction     : in
