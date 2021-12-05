@@ -6,7 +6,8 @@
 #pgf.preamble        : \usepackage[ipaex]{luatexja-preset} \usepackage{newpxtext} \usepackage{mathptmx} \usepackage{amssymb, amsmath}
 
 font.size   : 14
-font.family : Times New Roman
+font.family : serif
+font.serif  : Times New Roman, Source Han Serif JP, Liberation Serif
 
 mathtext.fontset : stix
 
