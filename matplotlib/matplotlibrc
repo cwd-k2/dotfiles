@@ -13,6 +13,7 @@ mathtext.fontset : stix
 
 #lines.linewidth : 0.7
 
+figure.figsize                : 6, 4.5
 figure.titlesize              : 22
 figure.constrained_layout.use : true
 
@@ -24,7 +25,7 @@ axes.linewidth : 2
 grid.linestyle : dashed
 grid.linewidth : 1.2
 
-legend.fontsize : 14
+legend.fontsize : 12
 legend.fancybox : false
 
 xtick.direction     : in
