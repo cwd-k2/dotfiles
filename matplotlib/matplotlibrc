@@ -7,7 +7,7 @@
 
 font.size   : 16
 font.family : serif
-font.serif  : Times New Roman, Source Han Serif JP, Liberation Serif
+font.serif  : Times New Roman, Source Han Serif JP, Liberation Serif, serif
 
 mathtext.fontset : stix
 
@@ -16,6 +16,9 @@ mathtext.fontset : stix
 figure.figsize                : 6, 4.5
 figure.titlesize              : 22
 figure.constrained_layout.use : true
+
+axes.formatter.use_mathtext : true
+axes.formatter.limits       : -3, 3
 
 axes.grid      : true
 axes.labelsize : 18
