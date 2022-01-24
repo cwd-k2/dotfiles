@@ -2,27 +2,6 @@
   "title": "英数キー・かなキーの設定",
   "rules": [
     {
-      "description": "左右シフト + スペースで英数・かなキーを入力",
-      "manipulators": [
-        {
-          "type": "basic",
-          "from": {
-            "key_code": "spacebar",
-            "modifiers": { "mandatory": ["left_shift"] }
-          },
-          "to": [ { "key_code": "lang2" } ]
-        },
-        {
-          "type": "basic",
-          "from": {
-            "key_code": "spacebar",
-            "modifiers": { "mandatory": ["right_shift"] }
-          },
-          "to": [ { "key_code": "lang1" } ]
-        }
-      ]
-    },
-    {
       "description": "左右シフト + 左右シフトで英数・かなキーを入力",
       "manipulators": [
         {
@@ -31,7 +10,7 @@
             "key_code": "right_shift",
             "modifiers": { "mandatory": ["left_shift"] }
           },
-          "to": [ { "key_code": "lang1" } ]
+          "to": [{ "key_code": "lang1" }]
         },
         {
           "type": "basic",
@@ -39,7 +18,36 @@
             "key_code": "left_shift",
             "modifiers": { "mandatory": ["right_shift"] }
           },
-          "to": [ { "key_code": "lang2" } ]
+          "to": [{ "key_code": "lang2" }]
+        }
+      ]
+    },
+    {
+      "description": "左右シフト単体ならば英数・かなキーを入力",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "left_shift",
+            "modifiers": { "optional": ["any"] }
+          },
+          "to": {
+            "key_code": "left_shift",
+            "lazy": true
+          },
+          "to_if_alone": [{ "key_code": "lang2" }]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "right_shift",
+            "modifiers": { "optional": ["control", "option", "command"] }
+          },
+          "to": {
+            "key_code": "right_shift",
+            "lazy": true
+          },
+          "to_if_alone": [{ "key_code": "lang1" }]
         }
       ]
     }
