@@ -56,12 +56,7 @@ name = 'ui/tree'
 repo = 'kyazdani42/nvim-tree.lua'
 hook_add = '''
 let g:nvim_tree_width           = 40
-"let g:nvim_tree_gitignore       = 1
-"let g:nvim_tree_auto_open       = 0
-"let g:nvim_tree_follow          = 1
-let g:nvim_tree_indent_markers  = 1
 let g:nvim_tree_git_hl          = 1
-"let g:nvim_tree_tab_open        = 1
 let g:nvim_tree_add_trailing    = 1
 let g:nvim_tree_group_empty     = 1
 
@@ -101,6 +96,12 @@ require ("nvim-tree").setup {
   hijack_netrw   = false,
 
   gitignore = true,
+
+  renderer = {
+    indent_markers = {
+      enable = true,
+    }
+  },
 
   -- lsp_diagnostics = true,
 
