@@ -11,20 +11,11 @@ rev    = 'release'
 merged = 0
 hook_add = '''
 
-if has('nvim-0.5')
-  let g:coc_global_extensions = [
-        \ 'coc-prettier',
-        \ 'coc-json',
-        \ 'coc-vimlsp',
-        \ ]
-else
-  let g:coc_global_extensions = [
-        \ 'coc-explorer',
-        \ 'coc-prettier',
-        \ 'coc-json',
-        \ 'coc-vimlsp',
-        \ ]
-endif
+let g:coc_global_extensions = [
+      \ 'coc-prettier',
+      \ 'coc-json',
+      \ 'coc-vimlsp',
+      \ ]
 
 nmap <silent> <leader>do <Plug>(coc-diagnostic-prev)
 nmap <silent> <leader>di <Plug>(coc-diagnostic-next)
