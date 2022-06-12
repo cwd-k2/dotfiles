@@ -55,11 +55,6 @@ nnoremap <leader>b <cmd>Telescope buffers<CR>
 name = 'ui/tree'
 repo = 'kyazdani42/nvim-tree.lua'
 hook_add = '''
-let g:nvim_tree_width           = 40
-let g:nvim_tree_git_hl          = 1
-let g:nvim_tree_add_trailing    = 1
-let g:nvim_tree_group_empty     = 1
-
 nnoremap <leader>f <cmd>NvimTreeToggle<CR>
 
 lua << LUA
@@ -95,9 +90,10 @@ require ("nvim-tree").setup {
   disable_netrw  = false,
   hijack_netrw   = false,
 
-  gitignore = true,
-
   renderer = {
+    add_trailing   = true,
+    group_empty    = true,
+    highlight_git  = true,
     indent_markers = {
       enable = true,
     }
@@ -106,15 +102,22 @@ require ("nvim-tree").setup {
   -- lsp_diagnostics = true,
 
   view = {
+    width = 30,
     mappings = {
       list = list
     },
   },
 
-  ignore = {
-    ".git",
-    ".cache",
-    "node_modules",
+  git = {
+    ignore = true
+  },
+
+  filters = {
+    custom = {
+      ".git",
+      ".cache",
+      "node_modules",
+    }
   }
 }
 
