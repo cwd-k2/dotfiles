@@ -1,17 +1,24 @@
 {
   "coc.preferences.formatOnType": true,
-  "coc.preferences.formatOnSaveFiletypes": ["css", "html", "json", "markdown", "c", "cpp", "rust", "haskell"],
+  "coc.preferences.formatOnSaveFiletypes": [
+    "css",
+    "html",
+    "json",
+    "markdown",
+    "javascript",
+    "typescript",
+    "c",
+    "cpp",
+    "rust",
+    "haskell"
+  ],
 
   "codeLens.enable": true,
   "diagnostic.virtualText": true,
 
-  "prettier.eslintIntegration": true,
-  "prettier.printWidth": 120,
+  "prettier.printWidth": 90,
 
-  "clangd.semanticHighlighting": true,
   "clangd.arguments": ["--header-insertion=iwyu"],
-
-  "metals.superMethodLensesEnabled": false,
 
   "Lua.workspace.library": {
     "$VIMRUNTIME/lua": true
@@ -32,7 +39,13 @@
       "args": ["--lsp"],
       "trace.server": "verbose",
       "filetypes": ["haskell", "lhaskell"],
-      "rootPatterns": ["*.cabal", "hie.yaml", "stack.yaml", "package.yaml", "cabal.project"],
+      "rootPatterns": [
+        "*.cabal",
+        "hie.yaml",
+        "stack.yaml",
+        "package.yaml",
+        "cabal.project"
+      ],
       "settings": {
         "haskell": {
           "formattingProvider": "stylish-haskell"
