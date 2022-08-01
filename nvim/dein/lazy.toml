@@ -1,11 +1,4 @@
 #======================================
-# lang/c++
-[[plugins]]
-name  = 'lang/c++/lsp-cxx-highlight'
-repo  = 'jackguo380/vim-lsp-cxx-highlight'
-on_ft = ['cpp', 'c']
-
-#======================================
 # lang/julia
 [[plugins]]
 name  = 'lang/julia/julia'

@@ -99,8 +99,6 @@ require ("nvim-tree").setup {
     }
   },
 
-  -- lsp_diagnostics = true,
-
   view = {
     width = 30,
     mappings = {
@@ -120,7 +118,6 @@ require ("nvim-tree").setup {
     }
   }
 }
-
 
 vim.g.nvim_tree_icons = {
   default = " ",

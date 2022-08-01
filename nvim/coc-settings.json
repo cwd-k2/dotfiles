@@ -30,8 +30,7 @@
     "swift": {
       "command": "sourcekit-lsp",
       "filetypes": ["swift"],
-      "trace.server": "verbose",
-      "rootPatterns": ["Package.swift"]
+      "trace.server": "verbose"
     },
 
     "haskell": {
@@ -55,7 +54,6 @@
 
     "golang": {
       "command": "gopls",
-      "disableWorkspaceFolders": true,
       "trace.server": "verbose",
       "filetypes": ["go"],
       "rootPatterns": ["go.mod"]
