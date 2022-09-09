@@ -53,6 +53,13 @@ let g:purescript_indent_do               = 3
 '''
 
 #======================================
+# lang/dhall
+[[plugins]]
+name  = 'lang/dhall/dhall'
+repo  = 'vmchale/dhall-vim'
+on_ft = ['dhall']
+
+#======================================
 # lang/toml
 [[plugins]]
 name  = 'lang/toml/toml'
