@@ -25,12 +25,6 @@
   "Lua.diagnostics.disable": ["lowercase-global"],
 
   "languageserver": {
-    "swift": {
-      "command": "sourcekit-lsp",
-      "filetypes": ["swift"],
-      "trace.server": "verbose"
-    },
-
     "haskell": {
       "command": "haskell-language-server-wrapper",
       "args": ["--lsp"],
