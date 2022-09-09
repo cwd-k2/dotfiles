@@ -28,11 +28,7 @@ nnoremap <silent> <c-k> <cmd>call CocAction('doHover')<CR>
 
 inoremap <silent><expr> <c-space> coc#refresh()
 
-if exists('*complete_info')
-  inoremap <nowait><expr> <cr> complete_info()['selected'] != '-1' ? '<C-y>' : '<C-g>u<CR>'
-else
-  inoremap <nowait><expr> <cr> pumvisible() ? '<C-y>' : '<C-g>u<CR>'
-endif
+inoremap <silent><expr> <cr> coc#pum#visible() ? coc#pum#confirm() : '<C-g>u<CR><C-r>=coc#on_enter()<CR>'
 
 autocmd CursorHold * silent call CocActionAsync('highlight')
 
