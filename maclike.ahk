@@ -101,6 +101,18 @@ F13 & Space::with_ctrl("{Space}")
 ;; IME operation
 <+RShift::Send,{vk1Csc079}
 >+LShift::Send,{vk1Dsc07B}
+~RShift Up::
+  if (A_PriorKey = "RShift")
+  {
+    Send,{vk1Csc079}
+  }
+  Return
+~LShift Up::
+  if (A_PriorKey = "LShift")
+  {
+    Send,{vk1Dsc07B}
+  }
+  Return
 
 ;; For terminal emulators
 #IfWinActive ahk_group TerminalApps
