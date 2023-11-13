@@ -17,6 +17,10 @@ GroupAdd, TerminalApps, ahk_exe Hyper.exe
 global Wait := 10
 global KillWait := 20
 
+; CapsLock / LControl (Left to A key) -> F13
+; Muhenkan / Eisu                     -> F14
+; Henkan   / Kana                     -> F15
+
 kill_line()
 {
   Send,+{End}
@@ -86,6 +90,7 @@ F13 & l::with_ctrl("l")
 F13 & z::with_ctrl("z")
 F13 & x::with_ctrl("x")
 F13 & v::with_ctrl("v")
+F13 & j::with_ctrl("j")
 F13 & Enter::with_ctrl("{Enter}")
 F13 & Space::with_ctrl("{Space}")
 
@@ -95,23 +100,26 @@ F13 & Space::with_ctrl("{Space}")
 ;F13 & t::Return
 ;F13 & s::Return
 ;F13 & o::Return
-;F13 & j::Return
 ;F13::Return
 
-;; IME operation
-<+RShift::Send,{vk1Csc079}
->+LShift::Send,{vk1Dsc07B}
-~RShift Up::
-  if (A_PriorKey = "RShift")
-  {
-    Send,{vk1Csc079}
-  }
-  Return
-~LShift Up::
-  if (A_PriorKey = "LShift")
+;; IME operation and Thumb Shift
+F14::
+  Send,{Blind}{LShift Down}
+  KeyWait,F14
+  if (A_PriorKey = "F14" and A_TimeSinceThisHotkey < 200)
   {
     Send,{vk1Dsc07B}
   }
+  Send,{LShift Up}
+  Return
+F15::
+  Send,{Blind}{LShift Down}
+  KeyWait,F15
+  if (A_PriorKey = "F15" and A_TimeSinceThisHotkey < 200)
+  {
+    Send,{vk1Csc079}
+  }
+  Send,{LShift Up}
   Return
 
 ;; For terminal emulators
