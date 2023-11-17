@@ -108,18 +108,18 @@ F13 & Space::with_ctrl("{Space}")
   KeyWait,F14
   if (A_PriorKey = "F14" and A_TimeSinceThisHotkey < 200)
   {
-    Send,{vk1Dsc07B}
+    Send,{vk1D}
   }
   Send,{LShift Up}
   Return
 *F15::
-  Send,{Blind}{LShift Down}
+  Send,{Blind}{RShift Down}
   KeyWait,F15
   if (A_PriorKey = "F15" and A_TimeSinceThisHotkey < 200)
   {
-    Send,{vk1Csc079}
+    Send,{vk1C}
   }
-  Send,{LShift Up}
+  Send,{RShift Up}
   Return
 
 ;; For terminal emulators
