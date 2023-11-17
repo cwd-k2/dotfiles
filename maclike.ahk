@@ -103,7 +103,7 @@ F13 & Space::with_ctrl("{Space}")
 ;F13::Return
 
 ;; IME operation and Thumb Shift
-F14::
+*F14::
   Send,{Blind}{LShift Down}
   KeyWait,F14
   if (A_PriorKey = "F14" and A_TimeSinceThisHotkey < 200)
@@ -112,7 +112,7 @@ F14::
   }
   Send,{LShift Up}
   Return
-F15::
+*F15::
   Send,{Blind}{LShift Down}
   KeyWait,F15
   if (A_PriorKey = "F15" and A_TimeSinceThisHotkey < 200)
