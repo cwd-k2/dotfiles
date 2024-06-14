@@ -4,6 +4,10 @@ inoremap <C-k> <ESC>
 vnoremap <C-k> <ESC>
 cnoremap <C-k> <ESC>
 
+inoremap <C-g> <ESC>
+vnoremap <C-g> <ESC>
+cnoremap <C-g> <ESC>
+
 nnoremap <silent>,j :call append(line('.'), '')<CR>
 nnoremap <silent>,k :call append(line('.')-1, '')<CR>
 
@@ -39,6 +43,8 @@ nnoremap <silent> <leader>y :<C-u>%y+<CR>
 
 nmap n nzzzn
 nmap N Nzzzn
+
+imap <Nul> <Nop>
 
 nnoremap <silent>T :call SplitTerm()<CR>
 

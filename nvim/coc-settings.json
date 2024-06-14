@@ -1,26 +1,28 @@
 {
   "coc.preferences.formatOnType": true,
-  "coc.preferences.formatOnSaveFiletypes": [
-    "css",
-    "html",
-    "json",
-    "markdown",
-    "javascript",
-    "typescript",
-    "c",
-    "cpp",
-    "rust",
-    "haskell"
-  ],
+
+  "[css][html][json][markdown][javascript][typescript]": {
+    "coc.preferences.formatOnSave": true
+  },
+
+  "[c][cpp]": {
+    "coc.preferences.formatOnSave": true
+  },
+
+  "[rust]": {
+    "coc.preferences.formatOnSave": true
+  },
+
+  "[haskell]": {
+    "coc.preferences.formatOnSave": false
+  },
 
   "codeLens.enable": true,
   "diagnostic.virtualText": true,
 
   "prettier.printWidth": 90,
 
-  "Lua.workspace.library": {
-    "$VIMRUNTIME/lua": true
-  },
+  "Lua.workspace.library": ["$VIMRUNTIME/lua"],
   "Lua.diagnostics.globals": ["vim"],
   "Lua.diagnostics.disable": ["lowercase-global"],
 
@@ -49,20 +51,6 @@
       "trace.server": "verbose",
       "filetypes": ["go"],
       "rootPatterns": ["go.mod"]
-    },
-
-    "purescript": {
-      "command": "purescript-language-server",
-      "args": ["--stdio"],
-      "filetypes": ["purescript"],
-      "trace.server": "off",
-      "rootPatterns": ["bower.json", "psc-package.json", "spago.dhall"],
-      "settings": {
-        "purescript": {
-          "addSpagoSources": true,
-          "addNpmPath": true
-        }
-      }
     }
   }
 }
