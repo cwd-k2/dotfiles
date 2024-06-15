@@ -1,2 +1,2 @@
-require('basics')
+require('basic')
 require('lazy-plugins')

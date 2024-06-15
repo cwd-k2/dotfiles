@@ -33,5 +33,28 @@ return {
     version = "*",
     event = "VeryLazy",
     opts = {},
+  },
+  {
+    'LeafCage/yankround.vim',
+    config = function()
+      vim.g.yankround_dir = vim.fn.stdpath('cache') .. '/yankround'
+      vim.g.yankround_max_history = 100
+
+      vim.cmd [[
+      nmap <nowait> p <Plug>(yankround-p)
+      nmap <nowait> P <Plug>(yankround-P)
+      nmap <nowait> <C-p> <Plug>(yankround-prev)
+      nmap <nowait> <C-n> <Plug>(yankround-next)
+      ]]
+    end
+  },
+  {
+    "folke/which-key.nvim",
+    event = "VeryLazy",
+    init = function()
+      vim.o.timeout = true
+      vim.o.timeoutlen = 300
+    end,
+    opts = {}
   }
 }
