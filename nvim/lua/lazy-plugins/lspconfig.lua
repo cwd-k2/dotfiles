@@ -1,3 +1,12 @@
+local function included(element, table)
+    for _, value in pairs(table) do
+        if value ~= element then
+            return true
+        end
+    end
+    return false
+end
+
 local function setup_cmp()
   local cmp = require('cmp')
 
@@ -33,7 +42,8 @@ local function setup_cmp()
 
   cmp.setup.cmdline(':', {
     mapping = cmp.mapping.preset.cmdline(),
-    sources = cmp.config.sources({
+    sources = cmp.config.sources(
+      {
         { name = 'cmdline' }
       },
       {
@@ -61,11 +71,11 @@ local function config()
 
   on_attach(function(client, buffer)
     local bufopts = { noremap = true, silent = true, buffer = buffer }
-    vim.keymap.set('n', '<C-k>', '<cmd>lua vim.lsp.buf.hover()<CR>', bufopts)
-    vim.keymap.set('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', bufopts)
-    vim.keymap.set('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', bufopts)
-    vim.keymap.set('n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>', bufopts)
-    vim.keymap.set('n', '<leader>r', '<cmd>lua vim.lsp.buf.rename()<CR>', bufopts)
+    vim.keymap.set('n', '<C-k>',     '<cmd>lua vim.lsp.buf.hover()<CR>',          bufopts)
+    vim.keymap.set('n', 'gd',        '<cmd>lua vim.lsp.buf.definition()<CR>',     bufopts)
+    vim.keymap.set('n', 'gi',        '<cmd>lua vim.lsp.buf.implementation()<CR>', bufopts)
+    vim.keymap.set('n', 'gr',        '<cmd>lua vim.lsp.buf.references()<CR>',     bufopts)
+    vim.keymap.set('n', '<leader>r', '<cmd>lua vim.lsp.buf.rename()<CR>',         bufopts)
 
     if client.supports_method("textDocument/formatting") then
       local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
@@ -76,18 +86,11 @@ local function config()
         group = augroup,
         buffer = buffer,
         callback = function()
-          -- goimports
-          local params = vim.lsp.util.make_range_params()
-          params.context = { only = { "source.organizeImports" } }
-          local result = vim.lsp.buf_request_sync(0, "textDocument/codeAction", params)
-
-          for cid, res in pairs(result or {}) do for _, r in pairs(res.result or {}) do if r.edit then
-            local enc = (vim.lsp.get_client_by_id(cid) or {}).offset_encoding or "utf-16"
-            vim.lsp.util.apply_workspace_edit(r.edit, enc)
-          end end end
-
           vim.lsp.buf.format({
-            async = false, -- filter: function で除外する lsp 指定可能
+            async = false,
+            filter = function(client)
+              return included(client.name, { "tsserver", "gopls" })
+            end
           })
         end,
       })
@@ -101,7 +104,9 @@ local function config()
     capabilities = capabilities,
   }
 
-  lspconfig.clangd.setup {}
+  lspconfig.clangd.setup {
+    capabilities = capabilities
+  }
 
   lspconfig.rust_analyzer.setup {
     ["rust-analyzer"] = {
@@ -119,15 +124,23 @@ local function config()
     capabilities = capabilities
   }
 
-  lspconfig.gopls.setup {}
+  lspconfig.gopls.setup {
+    capabilities = capabilities
+  }
 
   lspconfig.tsserver.setup {
     settings = {
-      completions = {
-        completeFunctionCalls = true,
-      }
+      completions = { completeFunctionCalls = true }
     },
     capabilities = capabilities
+  }
+
+  local null = require('null-ls')
+  null.setup {
+    sources = {
+      null.builtins.formatting.prettierd,
+      null.builtins.formatting.goimports,
+    }
   }
 end
 
@@ -142,5 +155,9 @@ return {
     'hrsh7th/nvim-cmp',
     'hrsh7th/cmp-vsnip',
     'hrsh7th/vim-vsnip',
+    {
+      'nvimtools/none-ls.nvim',
+      dependencies = { 'nvim-lua/plenary.nvim' }
+    }
   }
 }
