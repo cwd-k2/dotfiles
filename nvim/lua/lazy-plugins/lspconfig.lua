@@ -60,7 +60,7 @@ local setups = {
 local noformats = {
   "tsserver",
   "gopls",
-  "lua_ls,"
+  "lua_ls",
 }
 
 local function included(element, table)
