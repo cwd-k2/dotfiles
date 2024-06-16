@@ -69,7 +69,7 @@ local noformats = {
 
 local function included(element, table)
   for _, value in pairs(table) do
-    if value ~= element then
+    if value == element then
       return true
     end
   end
@@ -147,7 +147,7 @@ local function attached(client, buffer)
     local fmtopts = {
       async = false,
       filter = function(c)
-        return included(c.name, noformats)
+        return not included(c.name, noformats)
       end,
     }
 
