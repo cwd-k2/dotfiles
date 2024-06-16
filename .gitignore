@@ -3,3 +3,4 @@ zsh/.zprofile
 zsh/.zcompcache
 zsh/.zcompdump
 zsh/.zsh_sessions
+nvim/lazy-lock.json
