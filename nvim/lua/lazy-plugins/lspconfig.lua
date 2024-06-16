@@ -1,7 +1,9 @@
 local setups = {
   hls = {
     settings = {
-      formattingProvider = "stylish-haskell"
+      haskell = {
+        formattingProvider = "stylish-haskell"
+      },
     },
   },
 
