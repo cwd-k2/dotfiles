@@ -1,4 +1,4 @@
-function config()
+local function config()
   require('telescope').setup {
     pickers = {
       theme = "drowdown"

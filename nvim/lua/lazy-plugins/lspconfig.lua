@@ -57,6 +57,8 @@ local setups = {
       Lua = {}
     },
   },
+
+  vimls = {},
 }
 
 local noformats = {
@@ -144,8 +146,8 @@ local function attached(client, buffer)
     local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
     local fmtopts = {
       async = false,
-      filter = function(client)
-        return included(client.name, noformats)
+      filter = function(c)
+        return included(c.name, noformats)
       end,
     }
 
