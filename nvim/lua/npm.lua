@@ -24,7 +24,13 @@ local function npm_root_g()
   return string.gsub(result, "%s*$", "")
 end
 
+local function npm_which(lib)
+  local path = npm_root() .. '/' .. lib
+  return vim.loop.fs_stat(path) and path or (npm_root_g() .. '/' .. lib)
+end
+
 return {
   root   = npm_root,
   root_g = npm_root_g,
+  which  = npm_which,
 }

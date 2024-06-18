@@ -15,8 +15,8 @@ local function on_attach(bufnr)
   api.config.mappings.default_on_attach(bufnr)
 
   -- custom mappings
-  vim.keymap.set('n', '?', api.tree.toggle_help,     opts('Help'))
-  vim.keymap.set('n', 'v', api.node.open.vertical,   opts('Split vertically'))
+  vim.keymap.set('n', '?', api.tree.toggle_help, opts('Help'))
+  vim.keymap.set('n', 'v', api.node.open.vertical, opts('Split vertically'))
   vim.keymap.set('n', 's', api.node.open.horizontal, opts('Split horizontally'))
 end
 
