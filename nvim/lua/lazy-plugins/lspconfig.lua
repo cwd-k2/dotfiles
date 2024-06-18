@@ -1,3 +1,9 @@
+local function npm_which(lib)
+  local npm = require("npm")
+  local lcl = npm.root() .. '/' .. lib
+  return vim.loop.fs_stat(lcl) and lcl or (npm.root_g() .. '/' .. lib)
+end
+
 local setups = {
   hls = {
     settings = {
@@ -32,6 +38,20 @@ local setups = {
     settings = {
       completions = { completeFunctionCalls = true }
     },
+    on_new_config = function(config, root)
+      if require("lspconfig.util").root_pattern("vite.config.ts", "nuxt.config.ts")(root) then
+        config.init_options = {
+          plugins = {
+            {
+              name      = "@vue/typescript-plugin",
+              location  = npm_which("@vue/typescript-plugin"),
+              languages = { "javascript", "typescript", "vue" },
+            },
+          }
+        }
+      end
+    end,
+    filetypes = { "javascript", "typescript", "vue" }
   },
 
   lua_ls = {
@@ -59,12 +79,19 @@ local setups = {
   },
 
   vimls = {},
+
+  volar = {
+    on_new_config = function(config, _)
+      config.init_options.typescript.tsdk = npm_which("typescript/lib")
+    end,
+  },
 }
 
 local noformats = {
   "tsserver",
   "gopls",
   "lua_ls",
+  "volar"
 }
 
 local function included(element, table)
@@ -176,8 +203,16 @@ local function config()
   local null = require('null-ls')
   null.setup {
     sources = {
-      null.builtins.formatting.prettierd,
       null.builtins.formatting.goimports,
+      null.builtins.formatting.prettier,
+      require("none-ls.diagnostics.eslint").with {
+        condition = function(utils)
+          return utils.root_has_file({
+            ".eslintrc.json", ".eslintrc.js",
+            "eslint.config.js", "eslint.config.mjs", "eslint.config.cjs",
+          })
+        end
+      }
     }
   }
 end
@@ -195,7 +230,10 @@ return {
     'hrsh7th/vim-vsnip',
     {
       'nvimtools/none-ls.nvim',
-      dependencies = { 'nvim-lua/plenary.nvim' }
+      dependencies = {
+        'nvim-lua/plenary.nvim',
+        'nvimtools/none-ls-extras.nvim',
+      }
     }
   }
 }
