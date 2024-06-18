@@ -204,8 +204,8 @@ local function config()
   null.setup {
     sources = {
       null.builtins.formatting.goimports,
-      null.builtins.formatting.prettier,
-      require("none-ls.diagnostics.eslint").with {
+      null.builtins.formatting.prettierd,
+      require("none-ls.diagnostics.eslint_d").with {
         condition = function(utils)
           return utils.root_has_file({
             ".eslintrc.json", ".eslintrc.js",
