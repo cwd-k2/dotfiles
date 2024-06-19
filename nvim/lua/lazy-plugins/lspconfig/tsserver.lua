@@ -10,7 +10,7 @@ return {
           plugins = {
             {
               name = "@vue/typescript-plugin",
-              location = require('npm').which("@vue/typescript-plugin"),
+              location = require('npm').which(root, "@vue/typescript-plugin"),
               languages = { "javascript", "typescript", "vue" },
             },
           }

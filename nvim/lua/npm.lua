@@ -1,31 +1,39 @@
-local function npm_root()
-  local handle = io.popen("npm root")
+local function npm(args)
+  local notify = require('notify')
 
-  if handle == nil then
-    error("Failed to open command: npm root")
+  local job = require('plenary.job'):new({
+    command = "npm", args = args, enable_recording = true,
+  })
+
+  local stdout, code = job:sync()
+  local stderr = job:stderr_result()
+
+  if #stderr ~= 0 then
+    notify(table.concat(stderr, '\n'))
   end
 
-  local result = handle:read("*a")
-  handle:close()
+  if code ~= 0 then
+    local msg = '`npm ' .. table.concat(args, ' ') ..  '\' failed with exit code: ' .. code
+    error(debug.traceback(msg))
+  end
 
-  return string.gsub(result, "%s*$", "")
+  return table.concat(stdout, '\n')
+end
+
+local cache = {}
+
+local function npm_root(cwd)
+  cache[cwd] = cache[cwd] or string.gsub(npm({ "root" }), "%s*$", "")
+  return cache[cwd]
 end
 
 local function npm_root_g()
-  local handle = io.popen("npm root -g")
-
-  if handle == nil then
-    error("Failed to open command: npm root -g")
-  end
-
-  local result = handle:read("*a")
-  handle:close()
-
-  return string.gsub(result, "%s*$", "")
+  cache.g = cache.g or string.gsub(npm({ "root", "-g" }), "%s*$", "")
+  return cache.g
 end
 
-local function npm_which(lib)
-  local path = npm_root() .. '/' .. lib
+local function npm_which(cwd, lib)
+  local path = npm_root(cwd) .. '/' .. lib
   return vim.loop.fs_stat(path) and path or (npm_root_g() .. '/' .. lib)
 end
 
