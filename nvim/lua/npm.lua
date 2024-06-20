@@ -1,6 +1,4 @@
 local function npm(args)
-  local notify = require('notify')
-
   local job = require('plenary.job'):new({
     command = "npm", args = args, enable_recording = true,
   })
@@ -9,11 +7,11 @@ local function npm(args)
   local stderr = job:stderr_result()
 
   if #stderr ~= 0 then
-    notify(table.concat(stderr, '\n'))
+    require('notify')(table.concat(stderr, '\n'))
   end
 
   if code ~= 0 then
-    local msg = '`npm ' .. table.concat(args, ' ') ..  '\' failed with exit code: ' .. code
+    local msg = '`npm ' .. table.concat(args, ' ') .. '\' failed with exit code: ' .. code
     error(debug.traceback(msg))
   end
 
@@ -23,12 +21,12 @@ end
 local cache = {}
 
 local function npm_root(cwd)
-  cache[cwd] = cache[cwd] or string.gsub(npm({ "root" }), "%s*$", "")
+  cache[cwd] = cache[cwd] or npm({ "root" })
   return cache[cwd]
 end
 
 local function npm_root_g()
-  cache.g = cache.g or string.gsub(npm({ "root", "-g" }), "%s*$", "")
+  cache.g = cache.g or npm({ "root", "-g" })
   return cache.g
 end
 
