@@ -45,6 +45,19 @@ local function attached(client, buffer)
   vim.keymap.set('n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>', bufopts)
   vim.keymap.set('n', '<leader>r', '<cmd>lua vim.lsp.buf.rename()<CR>', bufopts)
 
+  if client.supports_method("textDocument/codeLens") then
+    local augroup = vim.api.nvim_create_augroup("LspCodeLens", {})
+
+    vim.api.nvim_clear_autocmds({ group = augroup, buffer = buffer })
+    vim.api.nvim_create_autocmd({ "CursorHold", "CursorHoldI", "InsertLeave" }, {
+      group = augroup,
+      buffer = buffer,
+      callback = function()
+        vim.lsp.codelens.refresh()
+      end,
+    })
+  end
+
   if client.supports_method("textDocument/formatting") then
     local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
     local fmtopts = {
