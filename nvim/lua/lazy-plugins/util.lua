@@ -12,7 +12,7 @@ return {
   },
   {
     'ntpeters/vim-better-whitespace',
-    config = function()
+    init = function()
       vim.cmd [[
       let g:better_whitespace_enabled = 1
       let g:better_whitespace_filetypes_blacklist = [
@@ -21,7 +21,7 @@ return {
       let g:strip_whitespace_on_save = 1
       let g:strip_whitespace_confirm = 0
       ]]
-    end
+    end,
   },
   {
     "folke/todo-comments.nvim",
@@ -36,7 +36,7 @@ return {
   },
   {
     'LeafCage/yankround.vim',
-    config = function()
+    init = function()
       vim.g.yankround_dir = vim.fn.stdpath('cache') .. '/yankround'
       vim.g.yankround_max_history = 100
 

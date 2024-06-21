@@ -2,9 +2,25 @@ return {
   {
     'nvim-lualine/lualine.nvim',
     dependencies = {
-      'nvim-tree/nvim-web-devicons'
+      'nvim-tree/nvim-web-devicons',
+      {
+        'NStefan002/screenkey.nvim',
+        init = function()
+          vim.g.screenkey_statusline_component = true
+        end,
+        config = true,
+      },
     },
-    opts = {}
+    opts = {
+      sections = {
+        lualine_z = {
+          function()
+            return require("screenkey").get_keys()
+          end,
+          'filename',
+        }
+      }
+    }
   },
   {
     'akinsho/bufferline.nvim',
@@ -20,7 +36,7 @@ return {
   },
   {
     'folke/tokyonight.nvim',
-    config = function()
+    init = function()
       vim.cmd [[
       colorscheme tokyonight-night
       ]]
