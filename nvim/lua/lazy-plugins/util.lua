@@ -32,7 +32,12 @@ return {
     "kylechui/nvim-surround",
     version = "*",
     event = "VeryLazy",
-    opts = {},
+    opts = {
+      keymaps = {
+        insert = "<C-s>s",
+        insert_line = "<C-s>S",
+      },
+    },
   },
   {
     'LeafCage/yankround.vim',

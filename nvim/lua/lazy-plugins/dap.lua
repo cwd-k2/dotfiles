@@ -1,7 +1,7 @@
 return {
   {
     'mfussenegger/nvim-dap',
-    lazy = true,
+    event = "VeryLazy",
     init = function()
       vim.cmd [[
       nnoremap <C-j> <cmd>lua require("dap").toggle_breakpoint()<CR>
@@ -31,7 +31,7 @@ return {
     },
     init = function()
       vim.cmd [[
-      nnoremap <C-h> <cmd>lua require("dapui").eval()<CR>
+      nnoremap <C-o> <cmd>lua require("dapui").eval()<CR>
       nnoremap <leader>du <cmd>lua require("dapui").toggle()<CR>
       ]]
     end,
