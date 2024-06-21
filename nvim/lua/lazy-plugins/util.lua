@@ -4,7 +4,7 @@ return {
     event = "InsertEnter",
     opts = {
       check_ts = true,
-    }
+    },
   },
   {
     'numToStr/Comment.nvim',
@@ -26,7 +26,7 @@ return {
   {
     "folke/todo-comments.nvim",
     dependencies = { "nvim-lua/plenary.nvim" },
-    opts = {}
+    opts = {},
   },
   {
     "kylechui/nvim-surround",
@@ -46,7 +46,7 @@ return {
       nmap <nowait> <C-p> <Plug>(yankround-prev)
       nmap <nowait> <C-n> <Plug>(yankround-next)
       ]]
-    end
+    end,
   },
   {
     "folke/which-key.nvim",
@@ -85,6 +85,6 @@ return {
       "MunifTanjim/nui.nvim",
       "rcarriga/nvim-notify",
       'hrsh7th/nvim-cmp',
-    }
+    },
   },
 }

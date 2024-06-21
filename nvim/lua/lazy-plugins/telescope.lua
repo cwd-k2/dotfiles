@@ -2,7 +2,7 @@ local function config()
   require('telescope').setup {
     pickers = {
       theme = "drowdown"
-    }
+    },
   }
 
   local builtin = require('telescope.builtin')

@@ -2,6 +2,7 @@ local lspsetups = {
   require("lazy-plugins.lspconfig.hls"),
   require("lazy-plugins.lspconfig.rust_analyzer"),
   require("lazy-plugins.lspconfig.clangd"),
+  require("lazy-plugins.lspconfig.gopls"),
   require("lazy-plugins.lspconfig.vimls"),
   require("lazy-plugins.lspconfig.lua_ls"),
   require("lazy-plugins.lspconfig.tsserver"),
@@ -109,7 +110,7 @@ return {
       dependencies = {
         'nvim-lua/plenary.nvim',
         'nvimtools/none-ls-extras.nvim',
-      }
-    }
-  }
+      },
+    },
+  },
 }

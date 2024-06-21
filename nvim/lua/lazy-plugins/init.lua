@@ -17,6 +17,7 @@ local plugins = {
   require('lazy-plugins/util'),
   require('lazy-plugins/tree'),
   require('lazy-plugins/lspconfig'),
+  require('lazy-plugins/dap'),
   require('lazy-plugins/telescope'),
   require('lazy-plugins/treesitter'),
 }

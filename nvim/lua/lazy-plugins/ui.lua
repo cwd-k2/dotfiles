@@ -18,9 +18,9 @@ return {
             return require("screenkey").get_keys()
           end,
           'filename',
-        }
-      }
-    }
+        },
+      },
+    },
   },
   {
     'akinsho/bufferline.nvim',
