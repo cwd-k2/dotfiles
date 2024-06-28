@@ -9,27 +9,6 @@ return {
       nnoremap <silent> <C-i> <cmd>lua require("dap").step_into()<cr>
       nnoremap <silent> <C-o> <cmd>lua require("dap").step_over()<cr>
       ]]
-
-      -- require('dap').adapters.haskell = {
-      --   type = 'executable';
-      --   command = 'haskell-debug-adapter';
-      -- }
-      -- require('dap').configurations.haskell = {
-      --   {
-      --     type = 'haskell',
-      --     request = 'launch',
-      --     name = 'Debug',
-      --     workspace = '${workspaceFolder}',
-      --     startup = "${file}",
-      --     stopOnEntry = true,
-      --     logFile = vim.fn.stdpath('data') .. '/haskell-dap.log',
-      --     logLevel = 'WARNING',
-      --     ghciEnv = vim.empty_dict(),
-      --     ghciPrompt = "λ: ",
-      --     ghciInitialPrompt = "λ: ",
-      --     ghciCmd= "stack ghci --test --no-load --no-build --main-is TARGET --ghci-options -fprint-evld-with-show",
-      --   },
-      -- }
     end,
   },
   {
@@ -46,6 +25,7 @@ return {
   },
   {
     'rcarriga/nvim-dap-ui',
+    event = "VeryLazy",
     opts = {
       mappings = {
         open = "O",
@@ -54,7 +34,7 @@ return {
     },
     init = function()
       vim.cmd [[
-      nnoremap <silent> <C-s> <cmd>lua require("dapui").eval()<CR>
+      nnoremap <silent><C-,> <cmd>lua require("dapui").eval()<CR>
       nnoremap <leader>du <cmd>lua require("dapui").toggle()<CR>
       ]]
     end,
