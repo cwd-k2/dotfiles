@@ -2,7 +2,7 @@ alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
 
-which exa > /dev/null && alias ls='exa --color=always --icons --sort=Name --git --group-directories-first'
+which eza > /dev/null && alias ls='eza --color=always --icons --sort=Name --git --group-directories-first'
 which bat > /dev/null && alias cat='bat'
 
 alias la='ls -a'
