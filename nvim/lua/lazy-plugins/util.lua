@@ -88,7 +88,15 @@ return {
     },
     dependencies = {
       "MunifTanjim/nui.nvim",
-      "rcarriga/nvim-notify",
+      {
+        "rcarriga/nvim-notify",
+        opts = {
+          fps = 60,
+          render = "compact",
+          stages = "fade",
+          timeout = 0,
+        },
+      },
       'hrsh7th/nvim-cmp',
     },
   },
