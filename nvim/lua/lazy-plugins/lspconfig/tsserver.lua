@@ -1,5 +1,5 @@
 return {
-  lsp = "tsserver",
+  lsp = "ts_ls",
   setup = {
     settings = {
       completions = { completeFunctionCalls = true }
