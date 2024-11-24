@@ -17,6 +17,12 @@ return {
         }
       end
     end,
+    on_attach = function(client)
+      if not require("lspconfig.util").root_pattern("package.json")(vim.fn.getcwd()) then
+        client.stop(true)
+      end
+    end,
+    single_file_support = false,
     filetypes = { "javascript", "typescript", "vue" }
   },
 }

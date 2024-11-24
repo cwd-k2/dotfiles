@@ -6,6 +6,7 @@ local lspsetups = {
   require("lazy-plugins.lspconfig.vimls"),
   require("lazy-plugins.lspconfig.lua_ls"),
   require("lazy-plugins.lspconfig.tsserver"),
+  require("lazy-plugins.lspconfig.denols"),
   require("lazy-plugins.lspconfig.volar"),
 }
 
@@ -13,6 +14,7 @@ local noformats = {
   "gopls",
   "lua_ls",
   "ts_ls",
+  "denols",
   "volar",
 }
 
