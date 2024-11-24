@@ -4,13 +4,13 @@ local function npm(args)
   })
 
   local stdout, code = job:sync()
-  local stderr = job:stderr_result()
-
-  if #stderr ~= 0 then
-    require('notify')(table.concat(stderr, '\n'))
-  end
 
   if code ~= 0 then
+    local stderr = job:stderr_result()
+    if #stderr ~= 0 then
+      require('notify')(table.concat(stderr, '\n'))
+    end
+
     local msg = '`npm ' .. table.concat(args, ' ') .. '\' failed with exit code: ' .. code
     error(debug.traceback(msg))
   end
