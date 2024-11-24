@@ -12,7 +12,7 @@ local lspsetups = {
 local noformats = {
   "gopls",
   "lua_ls",
-  "tsserver",
+  "ts_ls",
   "volar",
 }
 
