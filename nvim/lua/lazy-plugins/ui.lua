@@ -17,8 +17,14 @@ return {
           function()
             return require("screenkey").get_keys()
           end,
-          'filename',
+          'location',
         },
+      },
+      extensions = {
+        'nvim-tree',
+        'lazy',
+        'nvim-dap-ui',
+        'quickfix',
       },
     },
   },
