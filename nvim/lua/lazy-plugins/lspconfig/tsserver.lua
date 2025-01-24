@@ -5,7 +5,9 @@ return {
       completions = { completeFunctionCalls = true }
     },
     on_new_config = function(config, root)
-      if require("lspconfig.util").root_pattern("vite.config.ts", "nuxt.config.ts")(root) then
+      if require("lspconfig.util").root_pattern(
+        "vite.config.js", "vite.config.ts", "vite.config.mjs", "vite.config.mts",
+        "nuxt.config.js", "nuxt.config.ts", "nuxt.config.mjs", "nuxt.config.mts")(root) then
         config.init_options = {
           plugins = {
             {
